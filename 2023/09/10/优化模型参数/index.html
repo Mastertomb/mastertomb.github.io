@@ -1,0 +1,1767 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="优化模型参数, Mastertomb">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>优化模型参数 | Mastertomb</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Mastertomb</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Mastertomb</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">优化模型参数</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-09-10
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="1-先决条件代码"><a href="#1-先决条件代码" class="headerlink" title="1.先决条件代码"></a>1.先决条件代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch
+<span class="token keyword">from</span> torch <span class="token keyword">import</span> nn
+<span class="token keyword">from</span> torch<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>data <span class="token keyword">import</span> DataLoader
+<span class="token keyword">from</span> torchvision <span class="token keyword">import</span> datasets
+<span class="token keyword">from</span> torchvision<span class="token punctuation">.</span>transforms <span class="token keyword">import</span> ToTensor
+
+training_data <span class="token operator">=</span> datasets<span class="token punctuation">.</span>FashionMNIST<span class="token punctuation">(</span>
+    root<span class="token operator">=</span><span class="token string">"data"</span><span class="token punctuation">,</span>
+    train<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    download<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    transform<span class="token operator">=</span>ToTensor<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+test_data <span class="token operator">=</span> datasets<span class="token punctuation">.</span>FashionMNIST<span class="token punctuation">(</span>
+    root<span class="token operator">=</span><span class="token string">"data"</span><span class="token punctuation">,</span>
+    train<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>
+    download<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    transform<span class="token operator">=</span>ToTensor<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+train_dataloader <span class="token operator">=</span> DataLoader<span class="token punctuation">(</span>training_data<span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">64</span><span class="token punctuation">)</span>
+test_dataloader <span class="token operator">=</span> DataLoader<span class="token punctuation">(</span>test_data<span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">64</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">NeuralNetwork</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>flatten <span class="token operator">=</span> nn<span class="token punctuation">.</span>Flatten<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>linear_relu_stack <span class="token operator">=</span> nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>
+            nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">28</span><span class="token operator">*</span><span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">512</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            nn<span class="token punctuation">.</span>ReLU<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">512</span><span class="token punctuation">,</span> <span class="token number">512</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            nn<span class="token punctuation">.</span>ReLU<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">512</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        x <span class="token operator">=</span> self<span class="token punctuation">.</span>flatten<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        logits <span class="token operator">=</span> self<span class="token punctuation">.</span>linear_relu_stack<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> logits
+
+model <span class="token operator">=</span> NeuralNetwork<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="2-超参数"><a href="#2-超参数" class="headerlink" title="2.超参数"></a>2.超参数</h1><h2 id="2-1训练轮数Number-of-Epochs"><a href="#2-1训练轮数Number-of-Epochs" class="headerlink" title="2.1训练轮数Number of Epochs"></a>2.1训练轮数Number of Epochs</h2><p>训练轮数 - 遍历数据集的次数</p>
+<h2 id="2-2Batch-Size批量大小"><a href="#2-2Batch-Size批量大小" class="headerlink" title="2.2Batch Size批量大小"></a>2.2Batch Size批量大小</h2><p>批量大小（Batch Size） 是指在训练神经网络时，每次更新模型参数前所使用的数据样本数量。简单来说：</p>
+<p>①有一整个训练数据集（例如 1000 张图片）</p>
+<p>②训练时不会一次性用完所有数据，而是分成多个“小批次”（batches）</p>
+<p>③每个批次包含 Batch Size 个样本（例如 32 张图片）</p>
+<p>④每处理完一个批次，模型会根据这些样本的误差（通过反向传播计算出的梯度）更新一次参数。</p>
+<p>举个例子：</p>
+<p>假设数据集有 1000 个样本，设置 Batch Size &#x3D; 100：</p>
+<p>①模型会先处理前 100 个样本（前向传播计算预测结果）、</p>
+<p>②根据这 100 个样本的预测误差计算梯度（反向传播）</p>
+<p>③用梯度更新一次模型参数。  </p>
+<p>④重复上述步骤，直到处理完所有 1000 个样本（这称为一个 epoch，即完整遍历一次数据集）</p>
+<p>这里，每个 epoch 需要 10 次参数更新（1000&#x2F;100 &#x3D; 10）</p>
+<h3 id="2-2-1为什么需要-Batch-Size"><a href="#2-2-1为什么需要-Batch-Size" class="headerlink" title="2.2.1为什么需要 Batch Size"></a>2.2.1为什么需要 Batch Size</h3><p>①内存效率：一次性加载全部数据可能超出内存&#x2F;显存容量，分批次处理更可行</p>
+<p>②梯度稳定性：小批量样本的梯度比单个样本更稳定，比全量数据更灵活</p>
+<p>③训练速度：现代硬件（如 GPU）对小批量并行计算高度优化</p>
+<h3 id="2-2-2扩展知识"><a href="#2-2-2扩展知识" class="headerlink" title="2.2.2扩展知识"></a>2.2.2扩展知识</h3><h4 id="2-2-2-1随机梯度下降（SGD）"><a href="#2-2-2-1随机梯度下降（SGD）" class="headerlink" title="2.2.2.1随机梯度下降（SGD）"></a>2.2.2.1随机梯度下降（SGD）</h4><p>Batch Size &#x3D; 1（每次用 1 个样本更新参数，噪声大但收敛快）</p>
+<h4 id="2-2-2-2全批量梯度下降"><a href="#2-2-2-2全批量梯度下降" class="headerlink" title="2.2.2.2全批量梯度下降"></a>2.2.2.2全批量梯度下降</h4><p>Batch Size &#x3D; 整个数据集（计算成本高，梯度最准但易陷入局部极小）</p>
+<h4 id="2-2-2-3小批量梯度下降"><a href="#2-2-2-3小批量梯度下降" class="headerlink" title="2.2.2.3小批量梯度下降"></a>2.2.2.3小批量梯度下降</h4><p>Batch Size &#x3D; 32&#x2F;64&#x2F;128 等（平衡内存、速度和稳定性，最常用）。</p>
+<h2 id="2-3学习率"><a href="#2-3学习率" class="headerlink" title="2.3学习率"></a>2.3学习率</h2><p>每次批次&#x2F;周期更新模型参数的程度。较小的值会导致学习速度缓慢，而较大的值可能在训练过程中导致不可预测的行为。</p>
+<h3 id="2-3-1核心定义"><a href="#2-3-1核心定义" class="headerlink" title="2.3.1核心定义"></a>2.3.1核心定义</h3><p>学习率是机器学习中控制模型参数更新步长的超参数。它决定了<strong>每次用梯度更新参数时的调整幅度</strong></p>
+<p>直观理解：假设在下山（寻找损失函数最小值），学习率就是“每一步迈出的距离”</p>
+<p>​	步子太小（学习率低）→ 下山慢，可能需要很长时间才能到底</p>
+<p>​	步子太大（学习率高）→ 可能一步跨过谷底，甚至越走越高（发散）</p>
+<h3 id="2-3-2关键作用"><a href="#2-3-2关键作用" class="headerlink" title="2.3.2关键作用"></a>2.3.2关键作用</h3><h4 id="2-3-2-1控制收敛速度"><a href="#2-3-2-1控制收敛速度" class="headerlink" title="2.3.2.1控制收敛速度"></a>2.3.2.1控制收敛速度</h4><p>学习率小：参数更新幅度小，<strong>收敛稳定但速度慢</strong>，<strong>可能卡在局部最优</strong></p>
+<p>学习率大：参数更新幅度大，<strong>收敛快但可能震荡甚至无法收敛（跳过最优解）</strong></p>
+<h4 id="2-3-2-2影响模型性能"><a href="#2-3-2-2影响模型性能" class="headerlink" title="2.3.2.2影响模型性能"></a>2.3.2.2影响模型性能</h4><p>过高的学习率会导致<strong>损失函数剧烈波动</strong>，模型无法学到有效规律</p>
+<p>过低的学习率可能使模型<strong>过早停止优化</strong>（陷入局部最优而非全局最优）。</p>
+<h3 id="2-3-3如何选择学习率"><a href="#2-3-3如何选择学习率" class="headerlink" title="2.3.3如何选择学习率"></a>2.3.3如何选择学习率</h3><p>①从经验值开始（如 0.001、0.01、0.1），通过实验调整</p>
+<p>②使用学习率衰减（如训练后期逐步减小学习率）</p>
+<p>③借助<strong>自适应优化器（如 Adam、RMSProp）</strong>，它们能动态调整学习率。</p>
+<h3 id="2-3-4扩展知识"><a href="#2-3-4扩展知识" class="headerlink" title="2.3.4扩展知识"></a>2.3.4扩展知识</h3><h4 id="2-3-4-1学习率与批量大小的关系"><a href="#2-3-4-1学习率与批量大小的关系" class="headerlink" title="2.3.4.1学习率与批量大小的关系"></a>2.3.4.1学习率与批量大小的关系</h4><p><strong>批量大小（Batch Size）较大时，梯度估计更准确，可适当增大学习率</strong></p>
+<p><strong>批量大小较小时，梯度噪声大，需降低学习率以保持稳定。</strong></p>
+<h4 id="2-3-4-2学习率调度（Learning-Rate-Schedule）"><a href="#2-3-4-2学习率调度（Learning-Rate-Schedule）" class="headerlink" title="2.3.4.2学习率调度（Learning Rate Schedule）"></a>2.3.4.2学习率调度（Learning Rate Schedule）</h4><p>如余弦退火（Cosine Annealing）、热重启（Warm Restarts）等策略，能动态调整学习率以平衡收敛速度和精度</p>
+<h1 id="3-Optimization-Loop优化循环"><a href="#3-Optimization-Loop优化循环" class="headerlink" title="3.Optimization Loop优化循环"></a>3.Optimization Loop优化循环</h1><p>一旦设定了超参数，就可以通过优化循环来训练和优化模型。优化循环的每次迭代称为一个 epoch</p>
+<p>周期（epoch）的两个组成部分：训练循环和验证&#x2F;测试循环</p>
+<p>首先，训练循环。每个epoch中，模型使用训练数据集进行训练。这里的关键是遍历训练数据，通过前向传播计算损失，然后反向传播更新参数</p>
+<p>然后是验证&#x2F;测试循环。这部分是在每个epoch结束后用验证集或测试集评估模型性能。用户提到“检查模型性能是否在提升”，这里需要注意区分验证和测试的不同。验证集用于调整超参数和监控过拟合，而测试集是最终评估模型性能。需要说明验证循环的作用，比如计算准确率、损失等指标，以及如何通过验证结果调整训练策略，比如早停法。</p>
+<table>
+<thead>
+<tr>
+<th>数据用途</th>
+<th>目的</th>
+<th>使用时机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>验证集</strong></td>
+<td>调整超参数（如学习率、正则化强度）</td>
+<td>每个 Epoch 结束后使用</td>
+</tr>
+<tr>
+<td><strong>测试集</strong></td>
+<td>最终评估模型的泛化能力</td>
+<td>所有训练完成后使用一次</td>
+</tr>
+</tbody></table>
+<h2 id="3-1验证集和测试集"><a href="#3-1验证集和测试集" class="headerlink" title="3.1验证集和测试集"></a>3.1验证集和测试集</h2><h3 id="3-1-1核心作用"><a href="#3-1-1核心作用" class="headerlink" title="3.1.1核心作用"></a>3.1.1核心作用</h3><p><strong>验证集（Validation Set）：</strong></p>
+<p>​	用于在模型<strong>开发阶段</strong>评估模型的性能，<strong>指导超参数调优（如学习率、网络层数、正则化参数等）</strong></p>
+<p>​	帮助选择最优的模型架构（例如不同结构的神经网络）</p>
+<p>​	通常会在训练过程中<strong>多次使用</strong>（<strong>例如每个训练周期后计算验证集上的损失或准确率</strong>）</p>
+<p><strong>测试集（Test Set） ：</strong></p>
+<p>​	用于在模型<strong>最终部署前</strong>评估模型的泛化性能（即模型对未知数据的预测能力）</p>
+<p>​	测试集的数据在训练和调参过程中<strong>完全不可见</strong>，确保评估结果无偏</p>
+<p>​	<strong>仅使用一次</strong>（或严格限制次数），以避免模型间接“适应”测试集。</p>
+<h3 id="3-1-2使用场景"><a href="#3-1-2使用场景" class="headerlink" title="3.1.2使用场景"></a>3.1.2使用场景</h3><p><strong>验证集：</strong></p>
+<p>​	在训练过程中，通过验证集监控模型是否过拟合（训练集表现好但验证集表现差）</p>
+<p>​	通过验证集上的表现<strong>选择最佳超参数</strong>（如网格搜索或随机搜索）</p>
+<p>​	在交叉验证（Cross-Validation）中，验证集的角色由不同的数据子集轮流承担。</p>
+<p><strong>测试集：</strong></p>
+<p>​	最终验证模型的真实性能，反映其在生产环境中的表现</p>
+<p>​	用于学术论文或报告中，提供可复现的、无偏的性能指标（如准确率、F1分数等）</p>
+<h3 id="3-1-3数据划分"><a href="#3-1-3数据划分" class="headerlink" title="3.1.3数据划分"></a>3.1.3数据划分</h3><p>典型的数据划分比例（例如）：</p>
+<p>​	<strong>训练集（Training Set）</strong>：60%~80%</p>
+<p>​	<strong>验证集</strong>：10%~20%</p>
+<p>​	<strong>测试集</strong>：10%~20%</p>
+<p>如果数据量较小，可使用交叉验证（将训练集划分为多个子集，轮流作为验证集）。</p>
+<h3 id="3-1-4常见误区"><a href="#3-1-4常见误区" class="headerlink" title="3.1.4常见误区"></a>3.1.4常见误区</h3><h4 id="3-1-4-1错误做法"><a href="#3-1-4-1错误做法" class="headerlink" title="3.1.4.1错误做法"></a>3.1.4.1错误做法</h4><p>①<strong>测试集调整超参数</strong>：这会导致模型对测试集过拟合，测试集失去“独立评估”的意义</p>
+<p>②不划分测试集：仅用验证集评估模型，可能导致对泛化性能的高估（尤其在小数据集场景中）。</p>
+<h4 id="3-1-4-2正确流程"><a href="#3-1-4-2正确流程" class="headerlink" title="3.1.4.2正确流程"></a>3.1.4.2正确流程</h4><p>①用训练集训练模型</p>
+<p>②用验证集调参并选择模型</p>
+<p>③最终用测试集评估一次，得到无偏性能指标。</p>
+<h4 id="3-1-4-3交叉验证"><a href="#3-1-4-3交叉验证" class="headerlink" title="3.1.4.3交叉验证"></a>3.1.4.3交叉验证</h4><h5 id="3-1-4-3-1背景问题：数据量小的困境"><a href="#3-1-4-3-1背景问题：数据量小的困境" class="headerlink" title="3.1.4.3.1背景问题：数据量小的困境"></a>3.1.4.3.1背景问题：数据量小的困境</h5><p>当数据量较小时，如果直接按传统方式划分训练集、验证集和测试集（例如 70% 训练、15% 验证、15% 测试），可能导致：</p>
+<p>​	**训练数据不足：**模型无法充分学习。</p>
+<p>​	**验证&#x2F;测试集代表性差：**随机划分可能引入偏差，导致评估结果不稳定。</p>
+<h5 id="3-1-4-3-2交叉验证的解决方案"><a href="#3-1-4-3-2交叉验证的解决方案" class="headerlink" title="3.1.4.3.2交叉验证的解决方案"></a>3.1.4.3.2交叉验证的解决方案</h5><p>核心思想：不固定划分验证集，而是将训练集<strong>多次划分</strong>，轮流使用不同子集作为验证集。</p>
+<p>**具体步骤（以 k折交叉验证 为例）： **</p>
+<p>①将训练集划分为k个等大的子集（例如 k&#x3D;5）</p>
+<p>②进行k轮训练和验证：</p>
+<p>​	每轮选1个子集作为验证集，剩下k-1个子集合并为训练子集</p>
+<p>​	训练模型，并在验证集上评估性能</p>
+<p>③综合k次结果：取平均性能作为模型的泛化能力指标（例如平均准确率）</p>
+<p>④确定最终模型：根据平均性能选择最优超参数，最后用全部训练数据重新训练模型。</p>
+<p><strong>示意图（k&#x3D;5）：</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">第1轮：子集1为验证集，子集2-5为训练集  
+第2轮：子集2为验证集，子集1,3-5为训练集  
+...  
+第5轮：子集5为验证集，子集1-4为训练集  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="3-1-4-3-3为什么有效"><a href="#3-1-4-3-3为什么有效" class="headerlink" title="3.1.4.3.3为什么有效"></a>3.1.4.3.3为什么有效</h5><p>充分利用数据：每个样本都参与了训练和验证，避免单次划分的浪费</p>
+<p>减少评估结果的方差：通过多次验证，降低数据划分随机性的影响，结果更稳定</p>
+<p>**避免过拟合单次验证集：**模型不会因“巧合”在某个验证集上表现好而被选中。</p>
+<h5 id="3-1-4-3-4注意事项"><a href="#3-1-4-3-4注意事项" class="headerlink" title="3.1.4.3.4注意事项"></a>3.1.4.3.4注意事项</h5><p>**测试集仍需独立保留：**交叉验证仅替代验证集的作用，测试集仍需严格隔离，仅在最终评估时使用</p>
+<p>k值的选择： </p>
+<p>​	小数据（如几百条）：k&#x3D;5 或 10</p>
+<p>​	极大数据：可能直接使用单次验证集（因计算成本高）</p>
+<p>**交叉验证的代价：**训练次数是传统方法的k倍，计算成本较高。</p>
+<h5 id="3-1-4-3-5实际案例"><a href="#3-1-4-3-5实际案例" class="headerlink" title="3.1.4.3.5实际案例"></a>3.1.4.3.5实际案例</h5><p>假设你有 1000条数据，按以下方式划分：</p>
+<p>①测试集：200条（固定不动，最后用）</p>
+<p>②剩余800条：用于交叉验证（k&#x3D;5）</p>
+<p>​	每轮用 640条训练，160条验证，共训练5个模型</p>
+<p>​	综合5次验证结果选择超参数，最终用全部800条训练最终模型</p>
+<p>​	最后在200条测试集上评估性能。</p>
+<h5 id="3-1-4-3-6传统方法-vs-交叉验证的训练次数"><a href="#3-1-4-3-6传统方法-vs-交叉验证的训练次数" class="headerlink" title="3.1.4.3.6传统方法 vs. 交叉验证的训练次数"></a>3.1.4.3.6传统方法 vs. 交叉验证的训练次数</h5><p><strong>传统方法（单次划分验证集）</strong></p>
+<p>​	数据划分：将数据集分为训练集和验证集（例如 80% 训练，20% 验证）</p>
+<p>​	仅训练一次模型：用训练集训练模型，用验证集评估一次性能</p>
+<p>​	计算成本低：训练和评估只需一次。</p>
+<p><strong>k折交叉验证</strong></p>
+<pre><code>	数据划分：将训练集分成k个子集（例如 k=5）
+</code></pre>
+<p>​	训练k次模型：每次用k-1个子集训练，剩下的1个子集验证，共重复k轮</p>
+<p>​	计算成本高：训练次数是传统方法的k倍（例如 k&#x3D;5 时，训练5次）</p>
+<h2 id="3-2通过验证集上的表现选择最佳超参数"><a href="#3-2通过验证集上的表现选择最佳超参数" class="headerlink" title="3.2通过验证集上的表现选择最佳超参数"></a>3.2通过验证集上的表现选择最佳超参数</h2><p>在训练过程中，使用验证集（独立于训练集的数据）评估不同超参数组合下模型的性能，并选择在验证集上表现最好的超参数组合作为最终配置。</p>
+<h3 id="3-2-1什么是超参数"><a href="#3-2-1什么是超参数" class="headerlink" title="3.2.1什么是超参数"></a>3.2.1什么是超参数</h3><p>定义：超参数是模型训练前需要人为设定的参数，<strong>不由模型自动学习</strong>。例如：</p>
+<p>​	学习率（Learning Rate）</p>
+<p>​	批量大小（Batch Size）</p>
+<p>​	神经网络层数或神经元数量</p>
+<p>​	正则化系数（如L2正则化的λ值）</p>
+<p>​	优化器类型（如Adam、SGD）</p>
+<p>​	训练轮数（Epochs）等</p>
+<p>重要性：超参数直接影响模型的训练效率和最终性能。例如：</p>
+<p>​	学习率过大会导致训练不稳定，过小会导致收敛缓慢；</p>
+<p>​	正则化系数过小可能引发过拟合，过大可能导致欠拟合</p>
+<h3 id="3-2-2为什么需要验证集来选超参数"><a href="#3-2-2为什么需要验证集来选超参数" class="headerlink" title="3.2.2为什么需要验证集来选超参数"></a>3.2.2为什么需要验证集来选超参数</h3><p><strong>①避免过拟合训练集：</strong><br>如果直接根据训练集的表现调整超参数，模型可能会“记住”训练数据（过拟合），但在新数据（测试集或实际场景）上表现差。</p>
+<p><strong>②验证集的独立性：</strong></p>
+<p>验证集是训练过程中从未见过的数据，它模拟了模型面对新数据时的表现，能更客观地反映模型的泛化能力。</p>
+<p><strong>③量化评估：</strong><br>通过验证集上的指标（如准确率、F1分数、损失值），可以明确比较不同超参数组合的优劣。</p>
+<h3 id="3-2-3具体步骤"><a href="#3-2-3具体步骤" class="headerlink" title="3.2.3具体步骤"></a>3.2.3具体步骤</h3><p>假设要调整学习率（Learning Rate），流程如下：</p>
+<p>①<strong>定义超参数候选值</strong>：例如学习率候选值 [0.1, 0.01, 0.001]</p>
+<p>②<strong>固定其他参数</strong>：保持其他超参数（如批量大小、网络结构）不变</p>
+<p>③<strong>训练模型并验证：</strong></p>
+<p>​	对每个候选学习率：</p>
+<p>​		用训练集训练模型</p>
+<p>​		用验证集计算性能指标（如准确率）</p>
+<p>④<strong>选择最优超参数</strong>：选择验证集上表现最好的学习率（例如准确率最高的0.01）</p>
+<p>⑤<strong>最终训练</strong>：用选定的超参数，重新在完整训练集（训练集+验证集）上训练模型（部分方法可能保留验证集）。  ⑥<strong>独立测试</strong>：最后用测试集评估模型性能（测试集始终不参与超参数选择）。</p>
+<h3 id="3-2-4注意事项"><a href="#3-2-4注意事项" class="headerlink" title="3.2.4注意事项"></a>3.2.4注意事项</h3><p>**严格隔离测试集：**测试集仅在最终评估时使用，绝不能参与超参数选择，否则会高估模型性能（称为“数据泄露”）。</p>
+<p><strong>避免多次使用验证集：<strong>如果反复根据同一验证集调整超参数，模型可能</strong>间接过拟合验证集</strong>（需谨慎）。</p>
+<p>**交叉验证：**数据量少时，可用k折交叉验证替代单次验证集，更稳定地选择超参数（但计算成本高）。</p>
+<h3 id="3-2-5错误做法示例"><a href="#3-2-5错误做法示例" class="headerlink" title="3.2.5错误做法示例"></a>3.2.5错误做法示例</h3><p>①错误：<strong>根据测试集上的表现调整超参数</strong></p>
+<p>​	后果：模型会“适应”测试集，导致报告的测试结果不真实（失去泛化能力评估的意义）</p>
+<p>②错误：<strong>用验证集反复调参后，不重新训练模型</strong></p>
+<p>​	后果：模型可能过拟合验证集，最终性能下降。</p>
+<h1 id="4-损失函数"><a href="#4-损失函数" class="headerlink" title="4.损失函数"></a>4.损失函数</h1><p>损失函数衡量了所得结果与目标值之间的差异程度，而训练过程中我们正是要最小化这个损失函数。为了计算损失，利用给定数据样本的输入进行预测，并将其与真实的数据标签值进行比较。</p>
+<p>常见的损失函数包括用于回归任务的 nn.MSELoss（均方误差），以及用于分类任务的 nn.NLLLoss（负对数似然）。nn.CrossEntropyLoss 结合了 nn.LogSoftmax 和 nn.NLLLoss 。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Initialize the loss function</span>
+<span class="token comment"># 将模型的输出 logits 传递给 nn.CrossEntropyLoss ，它将归一化 logits 并计算预测误差。</span>
+loss_fn <span class="token operator">=</span> nn<span class="token punctuation">.</span>CrossEntropyLoss<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="4-1nn-CrossEntropyLoss"><a href="#4-1nn-CrossEntropyLoss" class="headerlink" title="4.1nn.CrossEntropyLoss()"></a>4.1nn.CrossEntropyLoss()</h2><h3 id="4-1-1核心功能"><a href="#4-1-1核心功能" class="headerlink" title="4.1.1核心功能"></a>4.1.1<strong>核心功能</strong></h3><ul>
+<li><strong>输入要求</strong>：<ul>
+<li><strong>模型输出（<code>input</code>）</strong>：未经 Softmax 处理的原始预测值（称为 <em>logits</em>），形状为 <code>(batch_size, num_classes)</code>。</li>
+<li><strong>真实标签（<code>target</code>）</strong>：每个样本的类别索引（整数形式），形状为 <code>(batch_size,)</code>。例如，三分类任务的标签可能是 <code>[0, 2, 1]</code>。</li>
+</ul>
+</li>
+<li><strong>数学过程</strong>：<ol>
+<li><strong>Softmax</strong>：对 <code>input</code> 进行 Softmax 归一化，得到每个类别的概率分布。</li>
+<li><strong>Log-Likelihood</strong>：计算真实标签对应概率的对数值。</li>
+<li><strong>取负数求平均</strong>：对上述值取负数并求平均，得到最终损失值。</li>
+</ol>
+</li>
+</ul>
+<h1 id="5-Optimizer-优化器"><a href="#5-Optimizer-优化器" class="headerlink" title="5.Optimizer  优化器"></a>5.Optimizer  优化器</h1><p>在深度学习中，优化器（Optimizer）是用于调整模型参数以最小化损失函数的关键算法。</p>
+<h2 id="5-1优化器的核心作用"><a href="#5-1优化器的核心作用" class="headerlink" title="5.1优化器的核心作用"></a>5.1优化器的核心作用</h2><p>优化器通过<strong>反向传播</strong>计算损失函数对模型参数的梯度，并据此更新参数，逐步降低损失值，使模型逼近最优解。其核心目标是在高维参数空间中高效、稳定地找到损失函数的极小值点。</p>
+<h2 id="5-2常见优化器及其原理"><a href="#5-2常见优化器及其原理" class="headerlink" title="5.2常见优化器及其原理"></a>5.2常见优化器及其原理</h2><h3 id="5-2-1随机梯度下降（SGD-Stochastic-Gradient-Descent）"><a href="#5-2-1随机梯度下降（SGD-Stochastic-Gradient-Descent）" class="headerlink" title="5.2.1随机梯度下降（SGD, Stochastic Gradient Descent）"></a>5.2.1随机梯度下降（SGD, Stochastic Gradient Descent）</h3><p>**原理：**直接使用当前批次的梯度更新参数，公式为：<br>$$<br>\theta_{t+1} &#x3D; \theta_t - \eta \nabla_\theta J(\theta)<br>$$<br>**特点：**简单但可能震荡，收敛慢。适合简单任务或作为基准。</p>
+<h3 id="5-2-2动量法（Momentum）"><a href="#5-2-2动量法（Momentum）" class="headerlink" title="5.2.2动量法（Momentum）"></a>5.2.2动量法（Momentum）</h3><p><strong>原理</strong>：引入动量项累积历史梯度，加速收敛并减少震荡：<br>$$<br>v_t &#x3D; \gamma v_{t-1} + \eta \nabla_\theta J(\theta) \<br>\theta_{t+1} &#x3D; \theta_t - v_t<br>$$<br>**特点：**缓解局部极小问题，常用于复杂地形优化。</p>
+<h3 id="5-2-3Adagrad"><a href="#5-2-3Adagrad" class="headerlink" title="5.2.3Adagrad"></a>5.2.3Adagrad</h3><p>**原理：**自适应调整学习率，为频繁更新的参数分配更小的学习率：<br>$$<br>G_t &#x3D; G_{t-1} + (\nabla_\theta J(\theta))^2 \<br>\theta_{t+1} &#x3D; \theta_t - \frac{\eta}{\sqrt{G_t + \epsilon}} \nabla_\theta J(\theta)<br>$$<br>**特点：**适合稀疏数据，但学习率可能过早下降。</p>
+<h3 id="5-2-4RMSprop"><a href="#5-2-4RMSprop" class="headerlink" title="5.2.4RMSprop"></a>5.2.4RMSprop</h3><p>**改进：**引入衰减因子（如𝛽&#x3D;0.9）缓解Adagrad的学习率衰减问题：<br>$$<br>G_t &#x3D; \beta G_{t-1} + (1-\beta)(\nabla_\theta J(\theta))^2 \<br>\theta_{t+1} &#x3D; \theta_t - \frac{\eta}{\sqrt{G_t + \epsilon}} \nabla_\theta J(\theta)<br>$$</p>
+<h3 id="5-2-5Adam（Adaptive-Moment-Estimation）"><a href="#5-2-5Adam（Adaptive-Moment-Estimation）" class="headerlink" title="5.2.5Adam（Adaptive Moment Estimation）"></a>5.2.5Adam（Adaptive Moment Estimation）</h3><p>**综合优势：**结合动量和自适应学习率，更新规则为：<br>$$<br>m_t &#x3D; \beta_1 m_{t-1} + (1-\beta_1)\nabla_\theta J(\theta) \quad (\text{一阶矩}) \<br>v_t &#x3D; \beta_2 v_{t-1} + (1-\beta_2)(\nabla_\theta J(\theta))^2 \quad (\text{二阶矩}) \<br>\hat{m}_t &#x3D; \frac{m_t}{1-\beta_1^t}, \quad \hat{v}<em>t &#x3D; \frac{v_t}{1-\beta_2^t} \<br>\theta</em>{t+1} &#x3D; \theta_t - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t<br>$$<br>**特点：**默认超参数（如𝛽1&#x3D;0.9,𝛽2&#x3D;0.999）通常表现稳健，适合大多数场景。</p>
+<h2 id="5-3如何选择优化器"><a href="#5-3如何选择优化器" class="headerlink" title="5.3如何选择优化器"></a>5.3如何选择优化器</h2><p><strong>Adam</strong>：通用首选，尤其适合数据稀疏、参数多或对调参经验不足的情况</p>
+<p><strong>SGD + Momentum</strong>：在充分调参（如学习率衰减）后，可能在图像任务中达到更优泛化性能<strong>Adagrad&#x2F;RMSprop</strong>：适用于非平稳目标或特征频率差异大的场景（如自然语言处理）。</p>
+<h2 id="5-4优化器的超参数调优"><a href="#5-4优化器的超参数调优" class="headerlink" title="5.4优化器的超参数调优"></a>5.4优化器的超参数调优</h2><p>**学习率（𝜂）：**Adam对初始学习率不敏感（常取1e-3），而SGD需精细调整</p>
+<p>**动量参数（𝛾,𝛽1）：**通常取0.9，增大可加速收敛但可能过冲</p>
+<p>**衰减系数（𝛽2）：**Adam中控制二阶矩的衰减，影响稳定性。</p>
+<h2 id="5-5实践建议"><a href="#5-5实践建议" class="headerlink" title="5.5实践建议"></a>5.5实践建议</h2><p>**默认尝试：**从Adam开始，若效果不佳再换用SGD+Momentum</p>
+<p>**学习率调度：**结合学习率衰减（如余弦退火）可进一步提升性能</p>
+<p>**控训练曲线：**观察损失&#x2F;准确率变化，判断优化器是否收敛或震荡。</p>
+<h2 id="5-6理论局限与挑战"><a href="#5-6理论局限与挑战" class="headerlink" title="5.6理论局限与挑战"></a>5.6理论局限与挑战</h2><p>**非凸优化：**深度模型的损失函数多为非凸，优化器通常寻找局部最优而非全局最优</p>
+<p>**泛化与优化：**快速收敛的优化器（如Adam）可能使模型落入尖锐极小值，影响泛化；而SGD可能找到更平坦的极小值，泛化更好。</p>
+<h1 id="6-训练循环"><a href="#6-训练循环" class="headerlink" title="6.训练循环"></a>6.训练循环</h1><p>在训练循环内部，优化过程分为三个步骤：</p>
+<p>①调用**optimizer.zero_grad() **来重置模型参数的梯度。默认情况下，梯度会累积；为了防止重复计算，我们在每次迭代时显式地将它们置零</p>
+<p>②通过调用 **loss.backward() **反向传播预测损失。PyTorch 会计算损失相对于每个参数的梯度</p>
+<p>③一旦我们获得了梯度，我们调用 <strong>optimizer.step()</strong> 来根据反向传播中收集的梯度调整参数。</p>
+<h1 id="7-Dataloader"><a href="#7-Dataloader" class="headerlink" title="7.Dataloader"></a>7.Dataloader</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#这行代码的作用是将数据集 training_data 包装成一个批量加载数据的迭代器（DataLoader），方便在训练模型时按批次（batch）高效地读取和处理数据。</span>
+training_data <span class="token operator">=</span> datasets<span class="token punctuation">.</span>FashionMNIST<span class="token punctuation">(</span>
+    root<span class="token operator">=</span><span class="token string">"data"</span><span class="token punctuation">,</span>
+    train<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    download<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    transform<span class="token operator">=</span>ToTensor<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+train_dataloader <span class="token operator">=</span> DataLoader<span class="token punctuation">(</span>training_data<span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">64</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="7-1-DataLoader-的核心功能"><a href="#7-1-DataLoader-的核心功能" class="headerlink" title="7.1**DataLoader 的核心功能**"></a>7.1**<code>DataLoader</code> 的核心功能**</h2><p><code>DataLoader</code> 是 PyTorch 中用于<strong>批量加载数据</strong>的工具，主要功能包括：</p>
+<ul>
+<li><strong>自动分批次</strong>：将整个数据集拆分成多个小批次（<code>batch_size</code> 指定每批的大小）。</li>
+<li><strong>多线程加速</strong>：可并行加载数据（通过 <code>num_workers</code> 参数，默认单线程）。</li>
+<li><strong>数据打乱</strong>：在训练时通常需要打乱数据顺序（通过 <code>shuffle=True</code>，但此处未显式设置，默认是 <code>False</code>）。</li>
+<li><strong>数据预处理</strong>：自动应用数据集定义的 <code>transform</code>（如之前的 <code>ToTensor()</code>）。</li>
+</ul>
+<h2 id="7-2参数解释"><a href="#7-2参数解释" class="headerlink" title="7.2参数解释"></a>7.2参数解释</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">train_dataloader <span class="token operator">=</span> DataLoader<span class="token punctuation">(</span>
+    training_data<span class="token punctuation">,</span>   <span class="token comment"># 数据集对象（此处是 FashionMNIST 训练集）</span>
+    batch_size<span class="token operator">=</span><span class="token number">64</span>    <span class="token comment"># 每批次加载 64 个样本</span>
+<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li><strong><code>training_data</code></strong>：已经加载好的数据集（例如 FashionMNIST 的 60,000 张训练图像）。</li>
+<li><strong><code>batch_size=64</code></strong>：每个批次包含 64 个样本（图像和标签），这是深度学习中常用的优化手段：<ul>
+<li>批量训练可提高内存利用率，加速模型收敛。</li>
+<li>较小的 <code>batch_size</code> 适合小内存设备，较大的值可能提升训练速度。</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-3生成的-train-dataloader-是什么"><a href="#7-3生成的-train-dataloader-是什么" class="headerlink" title="7.3生成的 train_dataloader 是什么"></a>7.3<strong>生成的 <code>train_dataloader</code> 是什么</strong></h2><ul>
+<li><strong>它是一个可迭代对象</strong>：在训练循环中，可以用 <code>for</code> 循环逐批获取数据。</li>
+<li><strong>每个批次的格式</strong>：每次迭代返回一个元组 <code>(batch_images, batch_labels)</code>，其中：<ul>
+<li><code>batch_images</code> 的形状是 <code>[64, 1, 28, 28]</code>，表示 64 张单通道 28x28 的图像。</li>
+<li><code>batch_labels</code> 的形状是 <code>[64]</code>，表示这 64 张图像对应的标签（0~9）。</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-4-Dataloader-返回值"><a href="#7-4-Dataloader-返回值" class="headerlink" title="7.4**Dataloader**返回值"></a>7.4**<code>Dataloader</code>**返回值</h2><p>在代码 <code>for batch, X in enumerate(train_dataloader):</code> 中，<strong><code>X</code> 是一个元组（tuple）</strong>，表示当前批次的输入数据，通常包含以下两部分：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">X <span class="token operator">=</span> <span class="token punctuation">(</span>images<span class="token punctuation">,</span> labels<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>PyTorch 的 <code>DataLoader</code> 在迭代时，默认返回一个批次的数据，格式为 <strong><code>(batch_images, batch_labels)</code></strong> 的元组：</p>
+<ul>
+<li>**<code>batch_images</code>：**形状为 <code>[batch_size, channels, height, width]</code> 的张量（Tensor），表示当前批次的图像数据。</li>
+<li>**<code>batch_labels</code>：**形状为 <code>[batch_size]</code> 的张量，表示当前批次的标签。</li>
+</ul>
+<p>例如，对于 FashionMNIST 数据集（单通道 28x28 图像，<code>batch_size=64</code>）：</p>
+<ul>
+<li>**<code>batch_images</code> **的形状是 <code>[64, 1, 28, 28]</code></li>
+<li>**<code>batch_labels</code> **的形状是 <code>[64]</code></li>
+</ul>
+<p><strong>代码中的潜在问题</strong></p>
+<p>如果直接使用 <code>X</code>，需要<strong>手动解包</strong> <code>images</code> 和 <code>labels</code>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> batch_idx<span class="token punctuation">,</span> X <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>train_dataloader<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    images<span class="token punctuation">,</span> labels <span class="token operator">=</span> X  <span class="token comment"># 解包元组</span>
+    <span class="token comment"># 后续操作...</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>更简洁的写法是<strong>直接解包</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> batch_idx<span class="token punctuation">,</span> <span class="token punctuation">(</span>images<span class="token punctuation">,</span> labels<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>train_dataloader<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 直接使用 images 和 labels</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>总结</strong></p>
+<ul>
+<li><strong><code>X</code> 是 <code>(images, labels)</code> 的元组</strong>，包含当前批次的图像和标签。</li>
+<li>如果需要在循环中使用图像和标签，建议直接解包为 <code>(images, labels)</code>，避免通过 <code>X[0]</code> 和 <code>X[1]</code> 间接访问。</li>
+<li><code>batch</code> 是批次的索引，可用于记录训练进度（例如每 100 个批次打印一次日志）。</li>
+</ul>
+<h2 id="7-5使用示例"><a href="#7-5使用示例" class="headerlink" title="7.5使用示例"></a>7.5<strong>使用示例</strong></h2><p>在训练循环中通常会这样使用：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> batch_idx<span class="token punctuation">,</span> <span class="token punctuation">(</span>images<span class="token punctuation">,</span> labels<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>train_dataloader<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 1. 将数据输入模型</span>
+    outputs <span class="token operator">=</span> model<span class="token punctuation">(</span>images<span class="token punctuation">)</span>
+    
+    <span class="token comment"># 2. 计算损失</span>
+    loss <span class="token operator">=</span> loss_function<span class="token punctuation">(</span>outputs<span class="token punctuation">,</span> labels<span class="token punctuation">)</span>
+    
+    <span class="token comment"># 3. 反向传播和优化</span>
+    optimizer<span class="token punctuation">.</span>zero_grad<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    loss<span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    optimizer<span class="token punctuation">.</span>step<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="8-完整实现"><a href="#8-完整实现" class="headerlink" title="8.完整实现"></a>8.完整实现</h1><h2 id="8-1enumerate"><a href="#8-1enumerate" class="headerlink" title="8.1enumerate()"></a>8.1enumerate()</h2><p><code>enumerate()</code> 是一个内置函数，用于在循环<strong>遍历可迭代对象</strong>（如列表、元组、字符串等）时，<strong>同时获取元素的索引和值</strong></p>
+<h3 id="8-1-1语法"><a href="#8-1-1语法" class="headerlink" title="8.1.1语法"></a>8.1.1<strong>语法</strong></h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">enumerate</span><span class="token punctuation">(</span>iterable<span class="token punctuation">,</span> start<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><strong>iterable</strong>：要遍历的可迭代对象（如列表、元组、字符串等）。</li>
+<li><strong>start</strong>（可选）：索引起始值，默认是 0。</li>
+</ul>
+<h3 id="8-1-2基本用法"><a href="#8-1-2基本用法" class="headerlink" title="8.1.2基本用法"></a>8.1.2<strong>基本用法</strong></h3><p>假设有一个列表 <code>fruits = [&#39;apple&#39;, &#39;banana&#39;, &#39;cherry&#39;]</code>，普通的 <code>for</code> 循环只能遍历元素：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> fruit <span class="token keyword">in</span> fruits<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>fruit<span class="token punctuation">)</span>
+<span class="token comment"># 输出: apple, banana, cherry</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>使用 <code>enumerate()</code> 后，可以同时获取索引和元素：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> index<span class="token punctuation">,</span> fruit <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> fruit<span class="token punctuation">)</span>
+<span class="token comment"># 输出:</span>
+<span class="token comment"># 0 apple</span>
+<span class="token comment"># 1 banana</span>
+<span class="token comment"># 2 cherry</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="8-1-2-1修改起始索引"><a href="#8-1-2-1修改起始索引" class="headerlink" title="8.1.2.1修改起始索引"></a>8.1.2.1<strong>修改起始索引</strong></h4><p>通过 <code>start</code> 参数可以指定索引起始值：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">for</span> index<span class="token punctuation">,</span> fruit <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>fruits<span class="token punctuation">,</span> start<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> fruit<span class="token punctuation">)</span>
+<span class="token comment"># 输出:</span>
+<span class="token comment"># 1 apple</span>
+<span class="token comment"># 2 banana</span>
+<span class="token comment"># 3 cherry</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="8-1-3返回值"><a href="#8-1-3返回值" class="headerlink" title="8.1.3返回值"></a>8.1.3<strong>返回值</strong></h3><p><code>enumerate()</code> 返回一个<strong>枚举对象</strong>，每次迭代生成一个包含索引和值的元组 <code>(index, value)</code>。例如：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#list() 的作用是将 enumerate(fruits) 返回的迭代器对象转换为一个列表，从而直接查看所有由 enumerate() 生成的索引-值对。</span>
+<span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">enumerate</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># 输出: [(0, 'apple'), (1, 'banana'), (2, 'cherry')]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="8-2初始化损失函数"><a href="#8-2初始化损失函数" class="headerlink" title="8.2初始化损失函数"></a>8.2初始化损失函数</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">loss_fn <span class="token operator">=</span> nn<span class="token punctuation">.</span>CrossEntropyLoss<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>**作用：**定义用于衡量模型预测结果与真实标签差异的损失函数。</p>
+<p><strong>CrossEntropyLoss（交叉熵损失）的特点：</strong></p>
+<p>①专为多分类任务设计，内部自动结合LogSoftmax和NLLLoss</p>
+<p>②输入要求：</p>
+<p>​	pred：模型输出的原始分数（logits），无需手动计算Softmax</p>
+<p>​	y：真实标签的类别索引（如形状为[batch_size]的整数张量）。</p>
+<p>**示例：**若分类有10个类别，pred形状为[batch_size, 10]，y形状为[batch_size]。</p>
+<h2 id="8-3Dropout-层"><a href="#8-3Dropout-层" class="headerlink" title="8.3Dropout 层"></a>8.3Dropout 层</h2><p>Dropout 层是深度学习中一种常用的<strong>正则化技术</strong>，主要用于防止神经网络过拟合（Overfitting）。它的核心思想是通过在训练过程中随机“关闭”一部分神经元，迫使网络不依赖特定的局部特征，从而增强模型的泛化能力。</p>
+<h3 id="8-3-1Dropout-的基本原理"><a href="#8-3-1Dropout-的基本原理" class="headerlink" title="8.3.1Dropout 的基本原理"></a>8.3.1<strong>Dropout 的基本原理</strong></h3><p><strong>训练阶段</strong>：</p>
+<ul>
+<li>每个神经元以概率 <code>p</code>（例如 <code>p=0.5</code>）被<strong>临时关闭</strong>（输出置为 0），未被关闭的神经元的输出会被放大 <code>1/(1-p)</code> 倍（以保持整体激活值的期望不变）。</li>
+<li>例如，<code>p=0.5</code> 时，每个神经元有 50% 的概率被关闭，未被关闭的神经元的输出会乘以 2。</li>
+<li>这种随机关闭机制迫使网络学习冗余的特征表示，避免对某些特定神经元过度依赖。</li>
+</ul>
+<p><strong>测试&#x2F;推理阶段</strong>：</p>
+<ul>
+<li>Dropout 层会被关闭，所有神经元都参与计算。</li>
+<li>为了保持输出的一致性，神经元的输出需要乘以 <code>1-p</code>（等价于训练时放大 <code>1/(1-p)</code> 倍的操作）。</li>
+</ul>
+<h3 id="8-3-2Dropout-的具体实现"><a href="#8-3-2Dropout-的具体实现" class="headerlink" title="8.3.2Dropout 的具体实现"></a>8.3.2<strong>Dropout 的具体实现</strong></h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch<span class="token punctuation">.</span>nn <span class="token keyword">as</span> nn
+
+model <span class="token operator">=</span> nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>
+    nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">784</span><span class="token punctuation">,</span> <span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment"># 输入层到隐藏层</span>
+    nn<span class="token punctuation">.</span>Dropout<span class="token punctuation">(</span>p<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>     <span class="token comment"># Dropout 层（训练时以 50% 概率关闭神经元）</span>
+    nn<span class="token punctuation">.</span>ReLU<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>     <span class="token comment"># 输出层</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment"># 训练时切换到训练模式</span>
+model<span class="token punctuation">.</span>train<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 测试时切换到评估模式（关闭 Dropout）</span>
+model<span class="token punctuation">.</span><span class="token builtin">eval</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="8-3-3Dropout-的应用场景"><a href="#8-3-3Dropout-的应用场景" class="headerlink" title="8.3.3Dropout 的应用场景"></a>8.3.3<strong>Dropout 的应用场景</strong></h3><p>①<strong>全连接层之后</strong>：</p>
+<ul>
+<li>通常在全连接层（Dense Layer）后添加 Dropout。</li>
+<li>卷积层一般使用较少（因为卷积本身具有局部连接特性，参数共享降低了过拟合风险）。</li>
+</ul>
+<p>②<strong>过拟合明显时</strong>：</p>
+<ul>
+<li>当训练集表现很好但验证集表现较差时，可以尝试添加 Dropout。</li>
+</ul>
+<p>③<strong>大型复杂网络</strong>：</p>
+<ul>
+<li>参数多、层数深的网络更容易过拟合，Dropout 效果更显著。</li>
+</ul>
+<h3 id="8-3-4注意事项"><a href="#8-3-4注意事项" class="headerlink" title="8.3.4注意事项"></a>8.3.4<strong>注意事项</strong></h3><ul>
+<li><strong>仅在训练时启用 Dropout</strong>：<ul>
+<li>测试&#x2F;推理时必须关闭 Dropout（通过 <code>model.eval()</code> 或 <code>training=False</code>）。</li>
+<li>否则会导致结果随机波动，破坏预测一致性。</li>
+</ul>
+</li>
+<li><strong>与 Batch Normalization 的配合</strong>：<ul>
+<li>Dropout 和 BatchNorm 同时使用时，可能因随机关闭神经元导致 BatchNorm 的统计量估计不准确。</li>
+<li>一些研究表明，两者结合可能降低效果，需根据实验调整。</li>
+</ul>
+</li>
+<li><strong>概率 <code>p</code> 的选择</strong>：<ul>
+<li>常用值为 <code>p=0.5</code>（对隐藏层）或 <code>p=0.2</code>（对输入层）。</li>
+<li>概率越大，正则化效果越强，但可能降低模型容量</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-3-5数学解释"><a href="#8-3-5数学解释" class="headerlink" title="8.3.5数学解释"></a>8.3.5<strong>数学解释</strong></h3><ul>
+<li><p><strong>训练时</strong>：每个神经元的输出为：<br>$$<br>y &#x3D; \begin{cases}<br>  \frac{x}{1-p} &amp; \text{以概率 } 1-p \text{（神经元未被关闭）} \<br>  0             &amp; \text{以概率 } p \text{（神经元被关闭）}<br>\end{cases}<br>$$</p>
+</li>
+<li><p><strong>测试时</strong>：所有神经元保持激活，输出为：<br>$$<br>y &#x3D; x \cdot (1-p)<br>$$</p>
+</li>
+</ul>
+<h3 id="8-3-6总结"><a href="#8-3-6总结" class="headerlink" title="8.3.6总结"></a>8.3.6<strong>总结</strong></h3><p>它在训练和测试阶段的行为不同，需通过 <code>model.train()</code> 和 <code>model.eval()</code> 正确切换模式。实际应用中需根据任务调整 Dropout 的位置和概率参数 <code>p</code>。</p>
+<h2 id="8-4Batch-Normalization-层"><a href="#8-4Batch-Normalization-层" class="headerlink" title="8.4Batch Normalization 层"></a>8.4<strong>Batch Normalization 层</strong></h2><p>Batch Normalization（批量归一化，简称 <strong>BatchNorm</strong>）是深度学习中一种重要的技术，主要用于加速训练、提升模型稳定性，并缓解梯度消失或爆炸的问题。</p>
+<h3 id="8-4-1核心思想"><a href="#8-4-1核心思想" class="headerlink" title="8.4.1核心思想"></a>8.4.1<strong>核心思想</strong></h3><p>BatchNorm 的核心思想是对神经网络每一层的输入进行<strong>标准化</strong>（均值为 0，方差为 1），从而减少内部协变量偏移（Internal Covariate Shift）。<br><strong>内部协变量偏移</strong>：随着网络层数的加深，每一层输入的分布会因参数更新而不断变化，导致后续层需要不断适应这种变化，降低了训练效率。</p>
+<h3 id="8-4-2具体实现步骤"><a href="#8-4-2具体实现步骤" class="headerlink" title="8.4.2具体实现步骤"></a>8.4.2<strong>具体实现步骤</strong></h3><p>BatchNorm 对每个 <strong>mini-batch</strong> 的数据按以下步骤处理（以全连接层为例）：</p>
+<p>①<strong>计算当前 batch 的均值和方差</strong>：<br>$$<br>\mu_B &#x3D; \frac{1}{m} \sum_{i&#x3D;1}^m x_i \quad (\text{均值})<br>$$</p>
+<p>$$<br>\sigma_B^2 &#x3D; \frac{1}{m} \sum_{i&#x3D;1}^m (x_i - \mu_B)^2 \quad (\text{方差})<br>$$</p>
+<p>m<em>m</em> 是 batch 的大小，xi是第 i 个样本的特征</p>
+<p>②<strong>标准化</strong>：<br>$$<br>\hat{x}_i &#x3D; \frac{x_i - \mu_B}{\sqrt{\sigma_B^2 + \epsilon}}<br>$$<br>ϵ 是一个极小值（如 10e−5），防止分母为 0。</p>
+<p>③<strong>缩放和平移（可学习参数）</strong>：<br>$$<br>y_i &#x3D; \gamma \hat{x}_i + \beta<br>$$<br><em>γ</em>（缩放因子）和 β（平移因子）是可训练的参数，用于恢复数据的表达能力（避免标准化后丢失非线性）。</p>
+<h3 id="8-4-3训练阶段-vs-推理阶段"><a href="#8-4-3训练阶段-vs-推理阶段" class="headerlink" title="8.4.3训练阶段 vs. 推理阶段"></a>8.4.3<strong>训练阶段 vs. 推理阶段</strong></h3><ul>
+<li><strong>训练阶段</strong>：<ul>
+<li>使用当前 batch 的均值和方差 $\mu_B, \sigma_B^2$ 进行标准化。</li>
+<li>同时，维护一个<strong>全局移动平均</strong>的均值和方差：</li>
+</ul>
+</li>
+</ul>
+<p>$$<br>\mu_{\text{global}} &#x3D; \text{momentum} \cdot \mu_{\text{global}} + (1 - \text{momentum}) \cdot \mu_B<br>$$</p>
+<p>$$<br>\sigma_{\text{global}}^2 &#x3D; \text{momentum} \cdot \sigma_{\text{global}}^2 + (1 - \text{momentum}) \cdot \sigma_B^2<br>$$</p>
+<pre><code>    momentum通常设为 0.9 或 0.99，控制历史统计量的权重。
+</code></pre>
+<ul>
+<li><p><strong>推理阶段</strong>：</p>
+<ul>
+<li><p>$$<br>使用训练时累积的全局均值和方差 \mu_{\text{global}}, \sigma_{\text{global}}^2 进行标准化<br>$$</p>
+</li>
+<li><p>不再依赖当前 batch 的数据。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-4-4代码示例（PyTorch）"><a href="#8-4-4代码示例（PyTorch）" class="headerlink" title="8.4.4代码示例（PyTorch）"></a>8.4.4<strong>代码示例（PyTorch）</strong></h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch<span class="token punctuation">.</span>nn <span class="token keyword">as</span> nn
+
+<span class="token comment"># 定义带 BatchNorm 的模型</span>
+model <span class="token operator">=</span> nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>
+    nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">784</span><span class="token punctuation">,</span> <span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    nn<span class="token punctuation">.</span>BatchNorm1d<span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment"># 全连接层后的 BatchNorm</span>
+    nn<span class="token punctuation">.</span>ReLU<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment"># 训练阶段</span>
+model<span class="token punctuation">.</span>train<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> data<span class="token punctuation">,</span> labels <span class="token keyword">in</span> train_loader<span class="token punctuation">:</span>
+    outputs <span class="token operator">=</span> model<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token comment"># ...</span>
+
+<span class="token comment"># 推理阶段</span>
+model<span class="token punctuation">.</span><span class="token builtin">eval</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">with</span> torch<span class="token punctuation">.</span>no_grad<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> data<span class="token punctuation">,</span> labels <span class="token keyword">in</span> test_loader<span class="token punctuation">:</span>
+        outputs <span class="token operator">=</span> model<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        <span class="token comment"># ...</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="8-5训练模式和评估模式"><a href="#8-5训练模式和评估模式" class="headerlink" title="8.5训练模式和评估模式"></a>8.5训练模式和评估模式</h2><p>在深度学习中，<code>model.train()</code> 和 <code>model.eval()</code> 是 PyTorch 框架中用于切换模型训练模式和评估模式的两个方法，主要影响模型中某些特定层（如 <code>Dropout</code> 和 <code>BatchNorm</code>）的行为。</p>
+<h3 id="8-5-1model-train"><a href="#8-5-1model-train" class="headerlink" title="8.5.1model.train()"></a>8.5.1model.train()</h3><ul>
+<li><strong>作用</strong>：将模型设置为<strong>训练模式</strong>。</li>
+<li><strong>适用场景</strong>：在模型<strong>训练阶段</strong>调用。</li>
+<li><strong>具体影响</strong>：<ul>
+<li><strong>Dropout 层</strong>：会按照设定的概率随机“关闭”神经元，防止过拟合。</li>
+<li><strong>Batch Normalization 层</strong>：使用当前 batch 的均值和方差进行归一化，并更新全局的移动平均统计量（均值和方差）。</li>
+</ul>
+</li>
+</ul>
+<p><strong>代码示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">model<span class="token punctuation">.</span>train<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 切换到训练模式</span>
+<span class="token keyword">for</span> data<span class="token punctuation">,</span> labels <span class="token keyword">in</span> train_loader<span class="token punctuation">:</span>
+    optimizer<span class="token punctuation">.</span>zero_grad<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    outputs <span class="token operator">=</span> model<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    loss <span class="token operator">=</span> criterion<span class="token punctuation">(</span>outputs<span class="token punctuation">,</span> labels<span class="token punctuation">)</span>
+    loss<span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    optimizer<span class="token punctuation">.</span>step<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="8-5-2-model-eval"><a href="#8-5-2-model-eval" class="headerlink" title="8.5.2 model.eval()"></a>8.5.2 <strong>model.eval()</strong></h3><ul>
+<li><strong>作用</strong>：将模型设置为<strong>评估模式</strong>。</li>
+<li><strong>适用场景</strong>：在模型<strong>验证&#x2F;测试阶段</strong>或<strong>推理阶段</strong>调用。</li>
+<li><strong>具体影响</strong>：<ul>
+<li><strong>Dropout 层</strong>：会被关闭，所有神经元均参与计算。</li>
+<li><strong>Batch Normalization 层</strong>：使用训练阶段累积的全局均值和方差（而不是当前 batch 的统计量）。</li>
+</ul>
+</li>
+</ul>
+<p><strong>代码示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">model<span class="token punctuation">.</span><span class="token builtin">eval</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 切换到评估模式</span>
+<span class="token keyword">with</span> torch<span class="token punctuation">.</span>no_grad<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 通常与 torch.no_grad() 结合使用，禁用梯度计算</span>
+    <span class="token keyword">for</span> data<span class="token punctuation">,</span> labels <span class="token keyword">in</span> test_loader<span class="token punctuation">:</span>
+        outputs <span class="token operator">=</span> model<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        accuracy <span class="token operator">=</span> calculate_accuracy<span class="token punctuation">(</span>outputs<span class="token punctuation">,</span> labels<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="8-5-3-关键注意事项"><a href="#8-5-3-关键注意事项" class="headerlink" title="8.5.3 关键注意事项"></a>8.5.3 <strong>关键注意事项</strong></h3><h4 id="8-5-3-1梯度计算"><a href="#8-5-3-1梯度计算" class="headerlink" title="8.5.3.1梯度计算"></a>8.5.3.1<strong>梯度计算</strong></h4><ul>
+<li><code>model.eval()</code> 本身不会禁用梯度计算，只是改变某些层的行为。</li>
+<li>通常与 <code>torch.no_grad()</code> 结合使用，以<strong>节省内存和计算资源</strong>（禁用自动求导）。</li>
+</ul>
+<h4 id="8-5-3-2BatchNorm-和-Dropout-的行为差异"><a href="#8-5-3-2BatchNorm-和-Dropout-的行为差异" class="headerlink" title="8.5.3.2BatchNorm 和 Dropout 的行为差异"></a>8.5.3.2<strong>BatchNorm 和 Dropout 的行为差异</strong></h4><ul>
+<li>如果忘记切换模式：<ul>
+<li>训练时使用 <code>eval()</code>：BatchNorm 的统计量不会更新，Dropout 失效，可能导致模型<strong>欠拟合</strong>。</li>
+<li>测试时使用 <code>train()</code>：BatchNorm 使用当前 batch 的统计量（可能不稳定），Dropout 随机关闭神经元，导致结果不一致。</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-6综合代码"><a href="#8-6综合代码" class="headerlink" title="8.6综合代码"></a>8.6综合代码</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">train_loop</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">,</span> model<span class="token punctuation">,</span> loss_fn<span class="token punctuation">,</span> optimizer<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    size <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">.</span>dataset<span class="token punctuation">)</span>
+    num_size <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">)</span>
+    model<span class="token punctuation">.</span>train<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    correct <span class="token operator">=</span> <span class="token number">0</span>
+    train_loss <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> batch<span class="token punctuation">,</span> <span class="token punctuation">(</span>X<span class="token punctuation">,</span>y<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        pred <span class="token operator">=</span> model<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+        loss <span class="token operator">=</span> loss_fn<span class="token punctuation">(</span>pred<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+        train_loss <span class="token operator">+=</span> loss<span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        correct <span class="token operator">+=</span> <span class="token punctuation">(</span>pred<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">==</span> y<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">type</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span><span class="token builtin">float</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        optimizer<span class="token punctuation">.</span>zero_grad<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        loss<span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        optimizer<span class="token punctuation">.</span>step<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    train_loss <span class="token operator">=</span> train_loss <span class="token operator">/</span> num_size
+    correct <span class="token operator">=</span> correct <span class="token operator">/</span> size
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Train Error: \n Accuracy: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">*</span> correct<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token format-spec">>0.1f</span><span class="token punctuation">&#125;</span></span><span class="token string">%, Avg loss: </span><span class="token interpolation"><span class="token punctuation">&#123;</span>train_loss<span class="token punctuation">:</span><span class="token format-spec">>8f</span><span class="token punctuation">&#125;</span></span><span class="token string"> \n"</span></span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">test_loop</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">,</span> model<span class="token punctuation">,</span> loss_fn<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Set the model to evaluation mode - important for batch normalization and dropout layers</span>
+    <span class="token comment"># Unnecessary in this situation but added for best practices</span>
+    model<span class="token punctuation">.</span><span class="token builtin">eval</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    size <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">.</span>dataset<span class="token punctuation">)</span>
+    num_batches <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>dataloader<span class="token punctuation">)</span>
+    test_loss<span class="token punctuation">,</span> correct <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span>
+
+    <span class="token comment"># Evaluating the model with torch.no_grad() ensures that no gradients are computed during test mode</span>
+    <span class="token comment"># also serves to reduce unnecessary gradient computations and memory usage for tensors with requires_grad=True</span>
+    <span class="token keyword">with</span> torch<span class="token punctuation">.</span>no_grad<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> X<span class="token punctuation">,</span> y <span class="token keyword">in</span> dataloader<span class="token punctuation">:</span>
+            pred <span class="token operator">=</span> model<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+            test_loss <span class="token operator">+=</span> loss_fn<span class="token punctuation">(</span>pred<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            correct <span class="token operator">+=</span> <span class="token punctuation">(</span>pred<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">==</span> y<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">type</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span><span class="token builtin">float</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    test_loss <span class="token operator">/=</span> num_batches
+    correct <span class="token operator">/=</span> size
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Test Error: \n Accuracy: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token operator">*</span>correct<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token format-spec">>0.1f</span><span class="token punctuation">&#125;</span></span><span class="token string">%, Avg loss: </span><span class="token interpolation"><span class="token punctuation">&#123;</span>test_loss<span class="token punctuation">:</span><span class="token format-spec">>8f</span><span class="token punctuation">&#125;</span></span><span class="token string"> \n"</span></span><span class="token punctuation">)</span>
+    
+    
+loss_fn <span class="token operator">=</span> nn<span class="token punctuation">.</span>CrossEntropyLoss<span class="token punctuation">(</span><span class="token punctuation">)</span>
+optimizer <span class="token operator">=</span> torch<span class="token punctuation">.</span>optim<span class="token punctuation">.</span>SGD<span class="token punctuation">(</span>model<span class="token punctuation">.</span>parameters<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> lr<span class="token operator">=</span>learning_rate<span class="token punctuation">)</span>
+
+epochs <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token keyword">for</span> t <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>epochs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Epoch </span><span class="token interpolation"><span class="token punctuation">&#123;</span>t<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">&#125;</span></span><span class="token string">\n-------------------------------"</span></span><span class="token punctuation">)</span>
+    train_loop<span class="token punctuation">(</span>train_dataloader<span class="token punctuation">,</span> model<span class="token punctuation">,</span> loss_fn<span class="token punctuation">,</span> optimizer<span class="token punctuation">)</span>
+    test_loop<span class="token punctuation">(</span>test_dataloader<span class="token punctuation">,</span> model<span class="token punctuation">,</span> loss_fn<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Done!"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="8-6-1correct-pred-argmax-1-y-type-torch-float-sum-item"><a href="#8-6-1correct-pred-argmax-1-y-type-torch-float-sum-item" class="headerlink" title="8.6.1correct &#x3D; (pred.argmax(1) &#x3D;&#x3D; y).type(torch.float).sum().item()"></a>8.6.1correct &#x3D; (pred.argmax(1) &#x3D;&#x3D; y).type(torch.float).sum().item()</h3><p>这段代码 <code>correct = (pred.argmax(1) == y).type(torch.float).sum().item()</code> 用于计算模型在当前批次中正确预测的样本数量。以下是逐部分解释：</p>
+<h4 id="8-6-1-1pred-argmax-1"><a href="#8-6-1-1pred-argmax-1" class="headerlink" title="8.6.1.1pred.argmax(1)"></a>8.6.1.1pred.argmax(1)</h4><ul>
+<li><strong>作用</strong>：获取模型预测的类别标签。</li>
+<li><strong>输入</strong>：<code>pred</code> 是一个形状为 <code>(batch_size, num_classes)</code> 的张量，表示每个样本对各个类别的预测概率。</li>
+<li><strong>操作</strong>：<code>argmax(1)</code> 沿着第1个维度（即每个样本的类别维度）找到最大值的索引，返回形状为 <strong><code>(batch_size,)</code></strong> 的张量。</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">pred <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.9</span><span class="token punctuation">,</span> <span class="token number">0.1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">0.7</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># batch_size=2, num_classes=2</span>
+pred<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment"># 输出 tensor([0, 1])</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">pred &#x3D; torch.randn(3,4)
+print(pred)
+print(pred.argmax(0))
+print(pred.argmax(1))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">Out:
+tensor([[-0.4057,  0.0702,  1.0809,  1.8416],
+        [ 1.2566, -0.8645, -1.3728, -0.2794],
+        [-0.1728,  0.6196,  0.1232,  0.0656]])
+tensor([1, 2, 0, 0])
+tensor([3, 0, 1])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="8-6-1-2-pred-argmax-1-y"><a href="#8-6-1-2-pred-argmax-1-y" class="headerlink" title="8.6.1.2**pred.argmax(1) == y**"></a>8.6.1.2**<code>pred.argmax(1) == y</code>**</h4><ul>
+<li><strong>作用</strong>：比较预测结果与真实标签，生成布尔张量。</li>
+<li><strong>输入</strong>：<code>y</code> 是形状为 <code>(batch_size,)</code> 的张量，表示每个样本的真实类别标签。</li>
+<li><strong>操作</strong>：逐元素比较预测标签和真实标签，生成布尔张量（<code>True</code> 表示预测正确，<code>False</code> 表示错误）。</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">y <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+pred_labels <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+pred_labels <span class="token operator">==</span> y  <span class="token comment"># 输出 tensor([True, True])</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="8-6-1-3-type-torch-float"><a href="#8-6-1-3-type-torch-float" class="headerlink" title="8.6.1.3**.type(torch.float)**"></a>8.6.1.3**<code>.type(torch.float)</code>**</h4><ul>
+<li><strong>作用</strong>：将布尔值转换为浮点数，便于后续数值计算。</li>
+<li><strong>操作</strong>：将 <code>True</code> 转换为 <code>1.0</code>，<code>False</code> 转换为 <code>0.0</code>。</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">bool_tensor <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+bool_tensor<span class="token punctuation">.</span><span class="token builtin">type</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span><span class="token builtin">float</span><span class="token punctuation">)</span>  <span class="token comment"># 输出 tensor([1., 0.])</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="8-6-1-4-sum"><a href="#8-6-1-4-sum" class="headerlink" title="8.6.1.4**.sum()**"></a>8.6.1.4**<code>.sum()</code>**</h4><ul>
+<li><strong>作用</strong>：统计当前批次中正确预测的样本总数。</li>
+<li><strong>操作</strong>：对浮点张量求和，结果是一个标量张量。</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">float_tensor <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">1.</span><span class="token punctuation">,</span> <span class="token number">0.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+float_tensor<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 输出 tensor(2.)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="8-6-1-5-item"><a href="#8-6-1-5-item" class="headerlink" title="8.6.1.5**.item()**"></a>8.6.1.5**<code>.item()</code>**</h4><ul>
+<li><strong>作用</strong>：将标量张量转换为 Python 数值。</li>
+<li><strong>操作</strong>：提取张量中的单个值，便于打印或存储。</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">scalar_tensor <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">)</span>
+scalar_tensor<span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 输出 2.0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shi Zhou</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2023/09/10/%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0/">http://example.com/2023/09/10/%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Shi Zhou</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2025/02/28/%E6%95%B0%E5%AD%A6%E4%BC%98%E5%8C%96/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-02-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Shi Zhou
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/09/10/%E4%BF%9D%E5%AD%98%E5%8A%A0%E8%BD%BD%E6%A8%A1%E5%9E%8B/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="保存加载模型">
+                        
+                        <span class="card-title">保存加载模型</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Shi Zhou
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2025</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Shi Zhou</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

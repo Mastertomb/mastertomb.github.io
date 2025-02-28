@@ -1,0 +1,1384 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Mastertomb">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Mastertomb</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Mastertomb</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Mastertomb</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2025-02-28
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="1-样本空间"><a href="#1-样本空间" class="headerlink" title="1.样本空间"></a>1.样本空间</h1><p>样本空间是一个随机试验所有可能结果的集合．例如，如果抛掷一枚硬币，那么样本空间就是集合{正面，反面}．如果投掷一个骰子，那么样本空间就是{1, 2, 3, 4, 5, 6}．随机试验中的每个可能结果称为样本点．<br>有些试验有两个或多个可能的样本空间．例如，从52张扑克牌中随机抽出一张，样本空间可以是数字（A到K），也可以是花色（黑桃，红桃，梅花，方块）．如果要完整地描述一张牌，就需要同时给出数字和花色，这时样本空间可以通过构建上述两个样本空间的笛卡儿乘积来得到.</p>
+<h1 id="2-事件和概率"><a href="#2-事件和概率" class="headerlink" title="2.事件和概率"></a>2.事件和概率</h1><p>随机事件（或简称事件）指的是一个被赋予概率的事物集合，也就是样本空间中的一个子集．概率（Probability）表示一个随机事件发生的可能性大小，为0到1之间的实数．比如，一个0.5的概率表示一个事件有50%的可能性发生．</p>
+<p>对于一个机会均等的抛硬币动作来说，其样本空间为“正面”或“反面”．可以定义各个随机事件，并计算其概率．比如，<br>（1） {正面}，其概率为0.5．<br>（2） {反面}，其概率为0.5．<br>（3） 空集∅，不是正面也不是反面，其概率为0．<br>（4） {正面|反面}，不是正面就是反面，其概率为1．</p>
+<h2 id="2-1随机变量"><a href="#2-1随机变量" class="headerlink" title="2.1随机变量"></a>2.1随机变量</h2><p>在随机试验中，试验的结果可以用一个数𝑋来表示，这个数𝑋是随着试验结果的不同而变化的，是样本点的一个函数．我们把这种数称为随机变量（Ran-dom Variable）．例如，随机机掷一个骰子，得到的点数就可以看成一个随机变量𝑋，𝑋的取值为{1, 2, 3, 4, 5, 6}．</p>
+<p>如果随机掷两个骰子，整个事件空间 $\Omega$ 可以由 36 个元素组成：</p>
+<p>$$<br>\Omega &#x3D; {(i, j) | i &#x3D; 1, \ldots, 6; j &#x3D; 1, \ldots, 6}.<br>$$</p>
+<p>一个随机事件也可以定义多个随机变量。比如在掷两个骰子的随机事件中，可以定义随机变量 $X$ 为获得的两个骰子的点数和，也可以定义随机变量 $Y$ 为获得的两个骰子的点数差。随机变量 $X$ 可以有 11 个整数值，而随机变量 $Y$ 只有 6 个整数值。</p>
+<p>$$<br>X(i, j) :&#x3D; i + j, \quad x &#x3D; 2, 3, \ldots, 12,<br>$$</p>
+<p>$$<br>Y(i, j) :&#x3D; |i - j|, \quad y &#x3D; 0, 1, 2, 3, 4, 5.<br>$$</p>
+<p>其中 $i, j$ 分别为两个骰子的点数。</p>
+<h3 id="2-1-1离散随机变量"><a href="#2-1-1离散随机变量" class="headerlink" title="2.1.1离散随机变量"></a>2.1.1离散随机变量</h3><p>如果随机变量 $X$ 所可能取的值为有限可列举的，有 $N$ 个有限取值</p>
+<p>$$<br>{x_1, \cdots, x_N},<br>$$</p>
+<p>则称 $X$ 为离散随机变量。</p>
+<p>要了解 $X$ 的统计规律，就必须知道它取每种可能值 $x_n$ 的概率，即</p>
+<p>$$<br>P(X &#x3D; x_n) &#x3D; p(x_n), \qquad \forall n \in {1, \cdots, N}<br>$$</p>
+<p>其中 $p(x_1), \cdots, p(x_N)$ 称为离散随机变量 $X$ 的概率分布（Probability Distribution）或分布，并且满足</p>
+<p>$$<br>\sum_{n&#x3D;1}^N p(x_n) &#x3D; 1.<br>$$</p>
+<p>$$<br>p(x_n) \geq 0, \qquad \forall n \in {1, \cdots, N}.<br>$$</p>
+<p>常见的离散随机变量的概率分布有：</p>
+<h4 id="2-1-1-1伯努利分布"><a href="#2-1-1-1伯努利分布" class="headerlink" title="2.1.1.1伯努利分布"></a>2.1.1.1伯努利分布</h4><p>在一次试验中，事件 $A$ 出现的概率为 $\mu$，不出现的概率为 $1 - \mu$。若用变量 $X$ 表示事件 $A$ 出现的次数，则 $X$​ 的取值为 0 和 1</p>
+<ul>
+<li><em>X</em>&#x3D;1 表示事件发生（概率为 𝜇<em>μ</em>）</li>
+<li>𝑋&#x3D;0 表示事件未发生（概率为 1−𝜇）。</li>
+</ul>
+<p>其相应的分布为<br>$$<br>p(x) &#x3D; \mu^x (1 - \mu)^{(1-x)},<br>$$</p>
+<p>这个分布称为伯努利分布（Bernoulli Distribution），又名两点分布或者 0-1 分布。</p>
+<p><strong>与二项分布的关系：</strong><br>如果把多次独立的伯努利试验结果相加（例如重复抛硬币10次），总成功次数服从二项分布（Binomial Distribution）。<br>伯努利分布可视为二项分布中试验次数 𝑛&#x3D;1时的特例。</p>
+<h4 id="2-1-1-2二项分布"><a href="#2-1-1-2二项分布" class="headerlink" title="2.1.1.2二项分布"></a>2.1.1.2二项分布</h4><p>在 $N$ 次伯努利试验中，若以变量 $X$ 表示事件 $A$ 出现的次数，则 $X$ 的取值为 ${0, \cdots, N}$，其相应的分布为二项分布（Binomial Distribution）。</p>
+<p>$$<br>P(X &#x3D; k) &#x3D; \binom{N}{k} \mu^k (1 - \mu)^{N-k}, \qquad k &#x3D; 0, \cdots, N,<br>$$</p>
+<p>其中 $\binom{N}{k}$ 为二项式系数，表示从 $N$ 个元素中取出 $k$ 个元素而不考虑其顺序的组合的总数。</p>
+<h3 id="2-1-2连续随机变量"><a href="#2-1-2连续随机变量" class="headerlink" title="2.1.2连续随机变量"></a>2.1.2连续随机变量</h3><p>与离散随机变量不同，一些随机变量 $X$ 的取值是不可列举的，由全部实数或者由一部分区间组成，比如</p>
+<p>$$<br>X &#x3D; {x \mid a \leq x \leq b}, \quad -\infty &lt; a &lt; b &lt; \infty,<br>$$<br>则称𝑋为连续随机变量．连续随机变量的值是不可数及无穷尽的．</p>
+<p>𝑋为连续随机变量．连续随机变量的值是不可数及无穷尽的．<br>对于连续随机变量𝑋，<strong>它取一个具体值𝑥𝑖 的概率为0</strong>，这和离散随机变量截然不同．因此<strong>用列举连续随机变量取某个值的概率来描述这种随机变量不但做不到</strong>，也毫无意义．</p>
+<p>连续随机变量 $X$ 的概率分布一般用概率密度函数（Probability Density Function, PDF）$p(x)$ 来描述。$p(x)$ 为可积函数，并满足</p>
+<p>$$<br>\int_{-\infty}^{+\infty} p(x) , dx &#x3D; 1,<br>$$</p>
+<p>$$<br>p(x) \geq 0.<br>$$</p>
+<p>给定概率密度函数 $p(x)$，便可以计算出随机变量落入某一个区域的概率。令 $\mathcal{R}$ 表示 $x$ 的非常小的邻近区域，$|\mathcal{R}|$ 表示 $\mathcal{R}$ 的大小，则 $p(x)|\mathcal{R}|$ 可以反映随机变量处于区域 $\mathcal{R}$ 的概率大小。<br>常见的连续随机变量的概率分布有：</p>
+<h4 id="2-1-2-1均匀分布"><a href="#2-1-2-1均匀分布" class="headerlink" title="2.1.2.1均匀分布"></a>2.1.2.1均匀分布</h4><p>若 $a, b$ 为有限数，$[a, b]$ 上的均匀分布（Uniform Distribution）的概率密度函数定义为</p>
+<p>$$<br>p(x) &#x3D;<br>\begin{cases}<br>\frac{1}{b-a}, &amp; a \leq x \leq b \<br>0, &amp; x &lt; a \text{ 或 } x &gt; b<br>\end{cases}<br>$$</p>
+<h4 id="2-1-2-2正态分布"><a href="#2-1-2-2正态分布" class="headerlink" title="2.1.2.2正态分布"></a>2.1.2.2正态分布</h4><p>正态分布，又称高斯分布，是概率论与统计学中最重要的连续型概率分布.它描述了自然界中大量独立随机变量的统计规律，如测量误差、人群身高、考试成绩等均近似服从正态分布.</p>
+<h5 id="2-1-2-2-1正态分布定义"><a href="#2-1-2-2-1正态分布定义" class="headerlink" title="2.1.2.2.1正态分布定义"></a>2.1.2.2.1正态分布定义</h5><p>正态分布的概率密度函数<br>$$<br>f(x) &#x3D; \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}<br>$$</p>
+<p>其中：</p>
+<ul>
+<li><p>$\mu$ 是均值（位置参数），决定分布的中心位置。</p>
+</li>
+<li><p>$\sigma$ 是标准差（尺度参数），决定分布的宽度（方差为 $\sigma^2$）。</p>
+</li>
+<li><p>$\sigma &gt; 0, x \in \mathbb{R}$。</p>
+</li>
+<li><p>若随机变量 $X$ 服从一个参数为 $\mu$ 和 $\sigma$ 的概率分布，简记为</p>
+<p>$$<br>X \sim \mathcal{N}(\mu, \sigma^2).<br>$$</p>
+<p>当 $\mu &#x3D; 0, \sigma &#x3D; 1$ 时，称为标准正态分布（Standard Normal Distribution）。</p>
+</li>
+</ul>
+<h5 id="2-1-2-2-2概率密度函数的归一性"><a href="#2-1-2-2-2概率密度函数的归一性" class="headerlink" title="2.1.2.2.2概率密度函数的归一性"></a>2.1.2.2.2<strong>概率密度函数的归一性</strong></h5><p>$$<br>\int_{-\infty}^{\infty} \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} , dx &#x3D; 1.<br>$$</p>
+<h5 id="2-1-2-2-3期望与方差的推导"><a href="#2-1-2-2-3期望与方差的推导" class="headerlink" title="2.1.2.2.3期望与方差的推导"></a>2.1.2.2.3<strong>期望与方差的推导</strong></h5><ul>
+<li><p><strong>期望</strong>:<br>$$<br>E(X) &#x3D; \int_{-\infty}^{\infty} x \cdot \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} , dx &#x3D; \mu.<br>$$<br>(利用对称性积分或直接代入变量代换)</p>
+</li>
+<li><p><strong>方差</strong>:<br>$$<br>\operatorname{Var}(X) &#x3D; E \left[ (X - \mu)^2 \right] &#x3D; \sigma^2.<br>$$</p>
+</li>
+</ul>
+<h3 id="2-1-3累积分布函数"><a href="#2-1-3累积分布函数" class="headerlink" title="2.1.3累积分布函数"></a>2.1.3累积分布函数</h3><h3 id="累积分布函数-CDF"><a href="#累积分布函数-CDF" class="headerlink" title="累积分布函数 (CDF)"></a>累积分布函数 (CDF)</h3><p>对于一个随机变量 $X$，其累积分布函数（Cumulative Distribution Function, CDF）是随机变量 $X$ 的取值小于等于 $x$ 的概率。</p>
+<p>$$<br>\text{cdf}(x) &#x3D; P(X \leq x).<br>$$</p>
+<p>以连续随机变量 $X$ 为例，累积分布函数定义为</p>
+<p>$$<br>\text{cdf}(x) &#x3D; \int_{-\infty}^{x} p(t) , dt,<br>$$</p>
+<h2 id="2-2随机向量"><a href="#2-2随机向量" class="headerlink" title="2.2随机向量"></a>2.2随机向量</h2><p>随机向量是指一组随机变量构成的向量。如果 $X_1, X_2, \cdots, X_K$ 为 $K$ 个随机变量，那么称 $\mathbf{X} &#x3D; [X_1, X_2, \cdots, X_K]$ 为一个 $K$ 维随机向量。随机向量也分为离散随机向量和连续随机向量。</p>
+<h3 id="2-2-1离散随机向量"><a href="#2-2-1离散随机向量" class="headerlink" title="2.2.1离散随机向量"></a>2.2.1离散随机向量</h3><p>离散随机向量的联合概率分布（Joint Probability Distribution）为</p>
+<p>$$<br>P(X_1 &#x3D; x_1, X_2 &#x3D; x_2, \cdots, X_K &#x3D; x_K) &#x3D; p(x_1, x_2, \cdots, x_K),<br>$$</p>
+<p>其中 $x_k \in \Omega_k$ 为变量 $X_k$ 的取值，$\Omega_k$ 为变量 $X_k$ 的样本空间。</p>
+<p>和离散随机变量类似，离散随机向量的概率分布满足</p>
+<p>$$<br>p(x_1, x_2, \cdots, x_K) \geq 0, \quad \forall x_1 \in \Omega_1, x_2 \in \Omega_2, \cdots, x_K \in \Omega_K<br>$$</p>
+<p>$$<br>\sum_{x_1 \in \Omega_1} \sum_{x_2 \in \Omega_2} \cdots \sum_{x_K \in \Omega_K} p(x_1, x_2, \cdots, x_K) &#x3D; 1.<br>$$</p>
+<h4 id="2-2-1-1多项分布"><a href="#2-2-1-1多项分布" class="headerlink" title="2.2.1.1多项分布"></a>2.2.1.1多项分布</h4><h5 id="2-1-1-1-1问题背景与定义"><a href="#2-1-1-1-1问题背景与定义" class="headerlink" title="2.1.1.1.1问题背景与定义"></a>2.1.1.1.1<strong>问题背景与定义</strong></h5><p>①场景描述</p>
+<p>袋子中有 $K$ 种颜色的球，每次取出一个球并记录颜色后，将球放回袋中，进行 $N$ 次独立抽取。</p>
+<p>②概率设定</p>
+<p>抽取到颜色 $k$ 的概率为 $\mu_k$，满足 $\sum_{k&#x3D;1}^K \mu_k &#x3D; 1$。</p>
+<p>③随机向量<br>$$<br>\mathbf{X} &#x3D; (X_1, X_2, \ldots, X_K),<br>$$</p>
+<p>其中 $X_k$ 表示 $N$ 次抽取中颜色 $k$ 出现的次数，且 $\sum_{k&#x3D;1}^K X_k &#x3D; N$。</p>
+<p>④目标</p>
+<p>求随机向量 $\mathbf{X}$ 的联合概率分布 $p(x_1, x_2, \ldots, x_K)$。</p>
+<h5 id="2-1-1-1-2概率分布"><a href="#2-1-1-1-2概率分布" class="headerlink" title="2.1.1.1.2概率分布"></a>2.1.1.1.2概率分布</h5><p>一个最常见的离散向量概率分布为多项分布（Multinomial Distribution）。多项分布是二项分布在随机向量的推广。假设一个袋子中装了很多球，总共有 $K$ 个不同的颜色。我们从袋子中取出 $N$ 个球。每次取出一个球时，就在袋子中放入一个同样颜色的球。这样保证同一颜色的球在不同试验中被取出的概率是相等的。</p>
+<p>令 $\mathbf{X}$ 为一个 $K$ 维随机向量，每个元素 $X_k (k &#x3D; 1, \cdots, K)$ 为取出的 $N$ 个球中颜色为 $k$ 的球的数量，则 $\mathbf{X}$ 服从多项分布，其概率分布为</p>
+<p>$$<br>p(x_1, \ldots, x_K \mid \boldsymbol{\mu}) &#x3D; \frac{N!}{x_1! \cdots x_K!} \mu_1^{x_1} \cdots \mu_K^{x_K},<br>$$</p>
+<p>其中 $\boldsymbol{\mu} &#x3D; [\mu_1, \cdots, \mu_K]^\top$ 分别为每次抽取的球的颜色为 $1, \cdots, K$ 的概率；$x_1, \cdots, x_K$ 为非负整数，并且满足 $\sum_{k&#x3D;1}^K x_k &#x3D; N$。</p>
+<p>多项分布的概率分布也可以用gamma函数表示：<br>$$<br>p(x_1, \ldots, x_K \mid \boldsymbol{\mu}) &#x3D; \frac{\Gamma\left(\sum_k x_k + 1\right)}{\prod_k \Gamma(x_k + 1)} \prod_{k&#x3D;1}^K \mu_k^{x_k},<br>$$</p>
+<p>其中 $\Gamma(z) &#x3D; \int_0^\infty \frac{t^{z-1}}{\exp(t)} , dt$ 为gamma函数。这种表示形式和狄利克雷分布类似，而狄利克雷分布可以作为多项分布的共轭先验。</p>
+<h6 id="2-1-1-1-2-1Gamma-函数与阶乘的关系"><a href="#2-1-1-1-2-1Gamma-函数与阶乘的关系" class="headerlink" title="2.1.1.1.2.1Gamma 函数与阶乘的关系"></a>2.1.1.1.2.1Gamma 函数与阶乘的关系</h6><p>Gamma 函数的定义为：<br>$$<br>\Gamma(z) &#x3D; \int_0^\infty \frac{t^{z-1}}{e^t} , dt, \quad z &gt; 0.<br>$$</p>
+<p>关键性质：</p>
+<ul>
+<li>对于正整数 $n$，有 $\Gamma(n) &#x3D; (n - 1)!$;</li>
+<li>推广性：Gamma 函数在复数域和正实数域均有定义，而阶乘仅适用于非负整数。</li>
+</ul>
+<p>通过这一性质，我们可以用 Gamma 函数替代多项分布中的阶乘运算。例如：</p>
+<p>$$<br>\Gamma(n + 1) &#x3D; n!.<br>$$</p>
+<h3 id="2-2-2连续随机向量"><a href="#2-2-2连续随机向量" class="headerlink" title="2.2.2连续随机向量"></a>2.2.2连续随机向量</h3><p>一个 $K$ 维连续随机向量 $\mathbf{X}$ 的联合概率密度函数（Joint Probability Density Function）满足</p>
+<p>$$<br>p(\mathbf{x}) &#x3D; p(x_1, \ldots, x_K) \geq 0,<br>$$</p>
+<p>$$<br>\int_{-\infty}^{+\infty} \cdots \int_{-\infty}^{+\infty} p(x_1, \ldots, x_K) , dx_1 \cdots dx_K &#x3D; 1.<br>$$</p>
+<h4 id="2-2-2-1多元正态分布"><a href="#2-2-2-1多元正态分布" class="headerlink" title="2.2.2.1多元正态分布"></a>2.2.2.1多元正态分布</h4><p>使用最广泛的连续随机向量分布为多元正态分布（Multivariate Normal Distribution），也称为多元高斯分布（Multivariate Gaussian Distribution）。若 $K$ 维随机向量 $\mathbf{X} &#x3D; [X_1, \ldots, X_K]^T$ 服从 $K$ 元正态分布，其密度函数为</p>
+<p>$$<br>p(\mathbf{x}) &#x3D; \frac{1}{(2\pi)^{K&#x2F;2} |\boldsymbol{\Sigma}|^{1&#x2F;2}} \exp \left( -\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^T \boldsymbol{\Sigma}^{-1} (\mathbf{x} - \boldsymbol{\mu}) \right),<br>$$</p>
+<p>其中 $\boldsymbol{\mu} \in \mathbb{R}^K$ 为多元正态分布的均值向量，$\boldsymbol{\Sigma} \in \mathbb{R}^{K \times K}$ 为多元正态分布的协方差矩阵，$|\boldsymbol{\Sigma}|$ 表示 $\boldsymbol{\Sigma}$ 的行列式。</p>
+<h4 id="2-2-2-2各项同性高斯分布"><a href="#2-2-2-2各项同性高斯分布" class="headerlink" title="2.2.2.2各项同性高斯分布"></a>2.2.2.2各项同性高斯分布</h4><p>如果一个多元高斯分布的协方差矩阵简化为 $\boldsymbol{\Sigma} &#x3D; \sigma^2 \mathbf{I}$，即每一个维随机变量都独立并且方差相同，那么这个多元高斯分布称为各向同性高斯分布（Isotropic Gaussian Distribution）。</p>
+<h4 id="2-2-2-3狄利克雷分布"><a href="#2-2-2-3狄利克雷分布" class="headerlink" title="2.2.2.3狄利克雷分布"></a>2.2.2.3狄利克雷分布</h4><h2 id="2-3边际分布"><a href="#2-3边际分布" class="headerlink" title="2.3边际分布"></a>2.3边际分布</h2><p>不失一般性，这里以二维随机向量进行讨论，这些结论在多维时依然成立．</p>
+<p>对于二维离散随机向量 $(X, Y)$，假设 $X$ 取值空间为 $\Omega_X$，$Y$ 取值空间为 $\Omega_Y$，其联合概率分布满足</p>
+<p>$$<br>p(x, y) \geq 0, \quad \sum_{x \in \Omega_X} \sum_{y \in \Omega_Y} p(x, y) &#x3D; 1.<br>$$</p>
+<p>对于联合概率分布 $p(x, y)$，我们可以分别对 $x$ 和 $y$ 进行求和。</p>
+<p>①对于固定的 $x$,<br>$$<br>\sum_{y \in \Omega_Y} p(x, y) &#x3D; p(x).<br>$$</p>
+<p>②对于固定的 $y$,<br>$$<br>\sum_{x \in \Omega_X} p(x, y) &#x3D; p(y).<br>$$</p>
+<p>由离散随机向量 $(X, Y)$ 的联合概率分布，对 $Y$ 的所有取值进行求和得到 $X$ 的概率分布；而对 $X$ 的所有取值进行求和得到 $Y$ 的概率分布。这里 $p(x)$ 和 $p(y)$ 就称为 $p(x, y)$ 的边际分布（Marginal Distribution）。</p>
+<p>对于二维连续随机向量 $(X, Y)$，其边际分布为</p>
+<p>$$<br>p(x) &#x3D; \int_{-\infty}^{+\infty} p(x, y) , dy,<br>$$</p>
+<p>$$<br>p(y) &#x3D; \int_{-\infty}^{+\infty} p(x, y) , dx.<br>$$</p>
+<p>一个二元正态分布的边际分布仍为正态分布。</p>
+<h2 id="2-4条件概率分布"><a href="#2-4条件概率分布" class="headerlink" title="2.4条件概率分布"></a>2.4条件概率分布</h2><h3 id="2-4-1离散随机向量的条件概率"><a href="#2-4-1离散随机向量的条件概率" class="headerlink" title="2.4.1离散随机向量的条件概率"></a>2.4.1离散随机向量的条件概率</h3><p>对于离散随机向量 $(X, Y)$，已知 $X &#x3D; x$ 的条件下，随机变量 $Y &#x3D; y$ 的条件概率（Conditional Probability）为</p>
+<p>$$<br>p(y|x) \triangleq P(Y &#x3D; y | X &#x3D; x) &#x3D; \frac{p(x, y)}{p(x)}.<br>$$</p>
+<p>这个公式定义了随机变量 $Y$ 关于随机变量 $X$ 的条件概率分布（Conditional Probability Distribution），简称条件分布。</p>
+<h3 id="2-4-2二维连续随机向量的条件概率密度函数"><a href="#2-4-2二维连续随机向量的条件概率密度函数" class="headerlink" title="2.4.2二维连续随机向量的条件概率密度函数"></a>2.4.2二维连续随机向量的条件概率密度函数</h3><p>对于二维连续随机向量 $(X, Y)$，已知 $X &#x3D; x$ 的条件下，随机变量 $Y &#x3D; y$ 的条件概率密度函数（Conditional Probability Density Function）为</p>
+<p>$$<br>p(y|x) &#x3D; \frac{p(x, y)}{p(x)}.<br>$$</p>
+<p>同理，已知 $Y &#x3D; y$ 的条件下，随机变量 $X &#x3D; x$ 的条件概率密度函数为</p>
+<p>$$<br>p(x|y) &#x3D; \frac{p(x, y)}{p(y)}.<br>$$</p>
+<h2 id="2-5贝叶斯定理"><a href="#2-5贝叶斯定理" class="headerlink" title="2.5贝叶斯定理"></a>2.5贝叶斯定理</h2><h3 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h3><p>通过2.4.2节的两个公式，两个条件概率 $p(y|x)$ 和 $p(x|y)$ 之间的关系为</p>
+<p>$$<br>p(y|x) &#x3D; \frac{p(x|y)p(y)}{p(x)}.<br>$$</p>
+<p>这个公式称为贝叶斯定理（Bayes’ Theorem），或贝叶斯公式。</p>
+<h2 id="2-6独立与条件独立"><a href="#2-6独立与条件独立" class="headerlink" title="2.6独立与条件独立"></a>2.6独立与条件独立</h2><p>对于两个离散（或连续）随机变量 $X$ 和 $Y$，如果其联合概率（或联合概率密度函数） $p(x, y)$ 满足</p>
+<p>$$<br>p(x, y) &#x3D; p(x) p(y),<br>$$</p>
+<p>则称 $X$ 和 $Y$ 互相独立（Independence），记为 $X \perp!!!\perp Y$.</p>
+<p>对于三个离散（或连续）随机变量 $X$, $Y$ 和 $Z$, 如果条件概率（或联合概率密度函数） $p(x, y|z)$ 满足</p>
+<p>$$<br>p(x, y|z) &#x3D; p(x|z) p(y|z),<br>$$</p>
+<p>则称在给定变量 $Z$ 时，$X$ 和 $Y$ 条件独立（Conditional Independence），记为 $X \perp!!!\perp Y|Z$.</p>
+<h2 id="2-7期望和方差"><a href="#2-7期望和方差" class="headerlink" title="2.7期望和方差"></a>2.7期望和方差</h2><h3 id="2-7-1期望"><a href="#2-7-1期望" class="headerlink" title="2.7.1期望"></a>2.7.1期望</h3><h4 id="2-7-1-1离散随机变量的期望"><a href="#2-7-1-1离散随机变量的期望" class="headerlink" title="2.7.1.1离散随机变量的期望"></a>2.7.1.1离散随机变量的期望</h4><p>对于 $N$ 个取值的离散变量 $X$，其概率分布为 $p(x_1), \cdots, p(x_N)$，$X$ 的期望（Expectation）定义为</p>
+<p>$$<br>\mathbb{E}[X] &#x3D; \sum_{n&#x3D;1}^{N} x_n p(x_n).<br>$$</p>
+<h4 id="2-7-1-2连续随机变量的期望"><a href="#2-7-1-2连续随机变量的期望" class="headerlink" title="2.7.1.2连续随机变量的期望"></a>2.7.1.2连续随机变量的期望</h4><p>对于连续随机变量 $X$，概率密度函数为 $p(x)$，其期望定义为</p>
+<p>$$<br>\mathbb{E}[X] &#x3D; \int_{\mathbb{R}} x p(x) , dx.<br>$$</p>
+<h3 id="2-7-2方差"><a href="#2-7-2方差" class="headerlink" title="2.7.2方差"></a>2.7.2方差</h3><p>随机变量 $X$ 的方差（Variance）用来定义它的概率分布的离散程度：</p>
+<p>$$<br>\operatorname{var}(X) &#x3D; \mathbb{E}\left[\left(X - \mathbb{E}[X]\right)^2\right].<br>$$</p>
+<p>（和期望的距离的平方再乘以对应概率）</p>
+<p>随机变量 $X$ 的方差也称为它的二阶矩。$\sqrt{\operatorname{var}(X)}$ 则称为 $X$ 的根方差或标准差。</p>
+<h3 id="2-7-3协方差"><a href="#2-7-3协方差" class="headerlink" title="2.7.3协方差"></a>2.7.3协方差</h3><h4 id="2-7-3-1协方差定义"><a href="#2-7-3-1协方差定义" class="headerlink" title="2.7.3.1协方差定义"></a>2.7.3.1协方差定义</h4><p>协方差衡量两个随机变量 $X$ 和 $Y$ 的联合变化趋势，定义为它们离均差乘积的期望：</p>
+<p>$$<br>\operatorname{cov}(X, Y) &#x3D; \mathbb{E}\left[(X - \mathbb{E}[X])(Y - \mathbb{E}[Y])\right]<br>$$</p>
+<p>$$<br>\operatorname{cov}(X, Y) &#x3D; \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y].<br>$$</p>
+<p>符号含义：</p>
+<ul>
+<li>若协方差为正，$X$ 和 $Y$ 倾向于同方向变化（同时高于或低于均值）。</li>
+<li>若协方差为负，$X$ 和 $Y$ 倾向于反向变化。</li>
+<li>协方差的绝对值越大，变量间的联合变化越显著。</li>
+</ul>
+<h4 id="2-7-3-2计算公式"><a href="#2-7-3-2计算公式" class="headerlink" title="2.7.3.2计算公式"></a>2.7.3.2计算公式</h4><h5 id="2-7-3-2-1定义式"><a href="#2-7-3-2-1定义式" class="headerlink" title="2.7.3.2.1定义式"></a>2.7.3.2.1定义式</h5><p>$$<br>\operatorname{cov}(X, Y) &#x3D; \mathbb{E}\left[(X - \mathbb{E}[X])(Y - \mathbb{E}[Y])\right]<br>$$</p>
+<h5 id="2-7-3-2-2展开式（简化计算）"><a href="#2-7-3-2-2展开式（简化计算）" class="headerlink" title="2.7.3.2.2展开式（简化计算）"></a>2.7.3.2.2<strong>展开式（简化计算）</strong></h5><p>$$<br>\operatorname{cov}(X, Y) &#x3D; \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y].<br>$$</p>
+<h5 id="2-7-3-2-3总体协方差和样本协方差"><a href="#2-7-3-2-3总体协方差和样本协方差" class="headerlink" title="2.7.3.2.3总体协方差和样本协方差"></a>2.7.3.2.3<strong>总体协方差和样本协方差</strong></h5><p>在计算协方差时，选择分母 n−1 取决于数据的性质：是否将数据视为总体（Population）还是样本（Sample）</p>
+<h6 id="2-7-3-2-3-1总体协方差"><a href="#2-7-3-2-3-1总体协方差" class="headerlink" title="2.7.3.2.3.1总体协方差"></a>2.7.3.2.3.1总体协方差</h6><p>若数据包含所有可能的观测值（完整总体），则协方差定义为：</p>
+<p>$$<br>\operatorname{cov}<em>{\text{总体}}(X, Y) &#x3D; \frac{1}{n} \sum</em>{i&#x3D;1}^{n} (x_i - \mu_X)(y_i - \mu_Y),<br>$$</p>
+<p>其中分母为 $n$，直接计算总体的真实协方差。</p>
+<h6 id="2-7-3-2-3-2样本协方差"><a href="#2-7-3-2-3-2样本协方差" class="headerlink" title="2.7.3.2.3.2样本协方差"></a>2.7.3.2.3.2样本协方差</h6><p>若数据是总体的一个样本（即用于估计总体协方差），则无偏估计公式为：</p>
+<p>$$<br>\operatorname{cov}<em>{\text{样本}}(X, Y) &#x3D; \frac{1}{n-1} \sum</em>{i&#x3D;1}^{n} (x_i - \bar{x})(y_i - \bar{y}),<br>$$</p>
+<p>分母为 $n - 1$，校正自由度损失（因使用了样本均值替代总体均值）。</p>
+<h4 id="2-7-3-3协方差与相关性的关系"><a href="#2-7-3-3协方差与相关性的关系" class="headerlink" title="2.7.3.3协方差与相关性的关系"></a>2.7.3.3<strong>协方差与相关性的关系</strong></h4><p>①协方差为零 ($\operatorname{cov}(X, Y) &#x3D; 0$):</p>
+<ul>
+<li><p>变量称为线性不相关，但可能存在非线性关系。</p>
+</li>
+<li><p>例如，若 $Y &#x3D; X^2$ 且 $X$ 对称分布（如标准正态分布）：</p>
+</li>
+<li><p>协方差的计算公式<br>$$<br>\operatorname{cov}(X, Y) &#x3D; \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y].<br>$$</p>
+<p>$$<br>\operatorname{cov}(X, Y) &#x3D; \mathbb{E}[X^3] - \mathbb{E}[X]\mathbb{E}[X^2] &#x3D; 0 - 0 \cdot \mathbb{E}[X^2] &#x3D; 0<br>$$</p>
+<p>$X$ 与 $Y$ 协方差为零，但 $Y$ 完全由 $X$ 决定（存在非线性关系）。</p>
+</li>
+</ul>
+<p>②变量独立 ($X \perp Y$):</p>
+<ul>
+<li>若独立，协方差一定为零（无任何关联）。</li>
+<li>反之不成立：协方差为零不代表独立（可能具有非线性依赖）。</li>
+</ul>
+<h4 id="2-7-3-4协方差的局限性"><a href="#2-7-3-4协方差的局限性" class="headerlink" title="2.7.3.4协方差的局限性"></a>2.7.3.4协方差的局限性</h4><p><strong>量纲敏感性</strong>：协方差的数值受变量单位和量纲影响，难以直接比较不同变量对的关联强度。</p>
+<p>例如：</p>
+<ul>
+<li>若 $X$ 单位从“米”改为“厘米”（尺度放大100倍），协方差将放大 $100 \times 100 &#x3D; 10^4$ 倍。</li>
+</ul>
+<p><strong>解决方案</strong>：使用归一化的皮尔逊相关系数<br>$$<br>\rho_{X,Y} &#x3D; \frac{\operatorname{cov}(X, Y)}{\sigma_X \sigma_Y}<br>$$</p>
+<p>($\sigma_X$, $\sigma_Y$ 为标准差，结果范围 $[-1, 1]$，无量纲)</p>
+<h3 id="2-7-4协方差矩阵"><a href="#2-7-4协方差矩阵" class="headerlink" title="2.7.4协方差矩阵"></a>2.7.4协方差矩阵</h3><p>两个 $M$ 和 $N$ 维的连续随机向量 $\mathbf{X}$ 和 $\mathbf{Y}$，它们的协方差（Covariance）为 $M \times N$ 的矩阵，定义为</p>
+<p>$$<br>\operatorname{cov}(\mathbf{X}, \mathbf{Y}) &#x3D; \mathbb{E}\left[\left(\mathbf{X} - \mathbb{E}[\mathbf{X}]\right)\left(\mathbf{Y} - \mathbb{E}[\mathbf{Y}]\right)^{\top}\right].<br>$$</p>
+<p>协方差矩阵 $\operatorname{cov}(\mathbf{X}, \mathbf{Y})$ 的第 $(m, n)$ 个元素等于随机变量 $X_m$ 和 $Y_n$ 的协方差。两个随机向量的协方差 $\operatorname{cov}(\mathbf{X}, \mathbf{Y})$ 与 $\operatorname{cov}(\mathbf{Y}, \mathbf{X})$ 互为转置关系。</p>
+<p>如果两个随机向量的协方差矩阵为对角矩阵，那么称这两个随机向量是无关的。</p>
+<p>单个随机向量 $\mathbf{X}$ 的协方差矩阵定义为</p>
+<p>$$<br>\operatorname{cov}(\mathbf{X}) &#x3D; \operatorname{cov}(\mathbf{X}, \mathbf{X}).<br>$$</p>
+<h3 id="2-7-5Jensen不等式"><a href="#2-7-5Jensen不等式" class="headerlink" title="2.7.5Jensen不等式"></a>2.7.5Jensen不等式</h3><p>如果 $X$ 是随机变量，$g$ 是凸函数，则</p>
+<p>$$<br>g(\mathbb{E}[X]) \leq \mathbb{E}[g(X)].<br>$$</p>
+<p>等式当且仅当 $X$ 是一个常数或 $g$ 是线性时成立，这个性质称为Jensen不等式。</p>
+<p>特别地，对于凸函数 $g$ 定义域上的任意两点 $x_1, x_2$ 和一个标量 $\lambda \in [0, 1]$，有</p>
+<p>$$<br>g(\lambda x_1 + (1 - \lambda)x_2) \leq \lambda g(x_1) + (1 - \lambda)g(x_2),<br>$$</p>
+<p>即凸函数 $g$ 上的任意两点的连线位于这两点之间函数曲线的上方。</p>
+<h3 id="2-7-6大数定律"><a href="#2-7-6大数定律" class="headerlink" title="2.7.6大数定律"></a>2.7.6大数定律</h3><p>大数定律（Law of Large Numbers）是指 $N$ 个样本 $X_1, \cdots, X_N$ 是独立同分布的，即 $\mathbb{E}[X_1] &#x3D; \cdots &#x3D; \mathbb{E}[X_N] &#x3D; \mu$，那么其均值</p>
+<p>$$<br>\bar{X}_N &#x3D; \frac{1}{N}(X_1 + \cdots + X_N),<br>$$</p>
+<p>收敛于期望值 $\mu$，即</p>
+<p>$$<br>\bar{X}_N \to \mu \quad \text{for} \quad N \to \infty.<br>$$</p>
+<h1 id="3-随机过程"><a href="#3-随机过程" class="headerlink" title="3.随机过程"></a>3.随机过程</h1><p>随机过程（Stochastic Process）是一组随机变量 $X_t$ 的集合，其中 $t$ 属于一个索引（index）集合 $\mathcal{T}$。索引集合 $\mathcal{T}$ 可以定义在时间域或者空间域，但一般为时间域，以实数或正数表示。当 $t$ 为实数时，随机过程为连续随机过程；当 $t$ 为整数时，为离散随机过程。</p>
+<p>日常生活中的很多例子包括股票的波动、语音信号、身高的变化等都可以看作随机过程。常见的和时间相关的随机过程模型包括伯努利过程、随机游走（Random Walk）、马尔可夫过程等。和空间相关的随机过程通常称为随机场（Random Field）。比如一张二维的图片，每个像素点（变量）通过空间的位置进行索引，这些像素就组成了一个随机过程。</p>
+<h2 id="3-1马尔可夫过程"><a href="#3-1马尔可夫过程" class="headerlink" title="3.1马尔可夫过程"></a>3.1马尔可夫过程</h2><h3 id="3-1-1核心定义"><a href="#3-1-1核心定义" class="headerlink" title="3.1.1核心定义"></a>3.1.1核心定义</h3><ul>
+<li><strong>核心思想</strong>：<strong>“未来仅由现在决定，与过去无关”</strong>。即在已知当前状态的条件下，未来状态的演变不再依赖于过去的历史。</li>
+<li>**数学表达：**对于离散时间随机过程 ${X_0, X_1, \ldots, X_T}$，马尔可夫性质的条件概率满足：</li>
+</ul>
+<p>$$<br>P(X_{t+1} &#x3D; x_{t+1} \mid X_{0:t} &#x3D; x_{0:t}) &#x3D; P(X_{t+1} &#x3D; x_{t+1} \mid X_t &#x3D; x_t),<br>$$</p>
+<p>​	其中 $X_{0:t}$ 表示从时刻 0 到 $t$ 的所有历史状态，$x_{0:t}$ 是具体的历史路径。</p>
+<h3 id="3-1-2直观理解"><a href="#3-1-2直观理解" class="headerlink" title="3.1.2直观理解"></a>3.1.2直观理解</h3><ul>
+<li><strong>简化问题的能力</strong>：无需记录全部历史（可能无限长），只用“当前抓拍”来预测未来。</li>
+<li><strong>日常隐喻：</strong><ul>
+<li><strong>天气预报</strong>：明天的天气只取决于今天的天气（而不是过去一周）。</li>
+<li><strong>路况预测</strong>：下一时刻的交通流量仅由当前位置的路况决定（无需知道出发后的所有路径）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-3关键细节"><a href="#3-1-3关键细节" class="headerlink" title="3.1.3关键细节"></a>3.1.3关键细节</h3><p>①<strong>条件独立性</strong>：</p>
+<ul>
+<li><strong>公式视角</strong>: 给定当前状态 $X_t$，未来状态 $X_{t+1}$ 与过去状态 $X_{0:t-1}$ 条件独立。</li>
+<li><strong>意义</strong>: 一旦当前状态 $X_t$ 已知，过去的历史信息对预测未来无附加价值。</li>
+</ul>
+<p>②<strong>状态空间 (State Space)</strong></p>
+<ul>
+<li><strong>定义</strong>: 随机变量所有可能取值的集合。</li>
+<li><strong>例如</strong>: 天气模型的状态空间可以是 {晴天, 雨天, 多云}；股票涨跌的状态空间可以是 {升, 降}。</li>
+</ul>
+<h3 id="3-1-4马尔可夫性是否成立？"><a href="#3-1-4马尔可夫性是否成立？" class="headerlink" title="3.1.4马尔可夫性是否成立？"></a>3.1.4<strong>马尔可夫性是否成立？</strong></h3><ul>
+<li><strong>现实中可能不严格成立</strong>：许多现象隐含长期历史依赖（如地震预测、经济周期）。</li>
+<li>为何仍适用？<ul>
+<li><strong>近似性</strong>：短期预测时，当前状态主导（如明天气温主要由今天影响）。</li>
+<li><strong>建模便利</strong>：即使不完全成立，仍可用马尔可夫模型作为简化框架。</li>
+</ul>
+</li>
+</ul>
+<p>马尔可夫性质通过“条件独立性”的数学机制，将复杂历史依赖简化为仅依赖当前状态的预测问题。<br>马尔可夫性质也可以描述为给定当前状态时，将来的状态与过去状态是条件独立的．</p>
+<h3 id="3-1-5马尔可夫链"><a href="#3-1-5马尔可夫链" class="headerlink" title="3.1.5马尔可夫链"></a>3.1.5马尔可夫链</h3><p>离散时间的马尔可夫过程也称为马尔可夫链（Markov Chain）。如果一个马尔可夫链的条件概率</p>
+<p>$$<br>P(X_{t+1} &#x3D; s | X_t &#x3D; s’) &#x3D; m_{ss’},<br>$$</p>
+<p>只和状态 $s$ 和 $s’$ 相关，和时间 $t$ 无关，则称为时间同质的马尔可夫链（Time-Homogeneous Markov Chain），其中 $m_{ss’}$ 称为状态转移概率。如果状态空间大小 $K$ 是有限的，状态转移概率可以用一个矩阵 $\mathbf{M} \in \mathbb{R}^{K \times K}$ 表示，称为状态转移矩阵（Transition Matrix），其中元素 $m_{ij}$ 表示状态 $s_i$ 转移到状态 $s_j$ 的概率。</p>
+<h4 id="3-1-5-1平稳分布"><a href="#3-1-5-1平稳分布" class="headerlink" title="3.1.5.1平稳分布"></a>3.1.5.1平稳分布</h4><p>假设状态空间大小为 $K$，向量 $\boldsymbol{\pi} &#x3D; [\pi_1, \cdots, \pi_K]^T$ 为状态空间中的一个分布，满足 $0 \leq \pi_k \leq 1$ 和 $\sum_{k&#x3D;1}^K \pi_k &#x3D; 1$。</p>
+<p>对于状态转移矩阵为 $\mathbf{M}$ 的时间同质的马尔可夫链，若存在一个分布 $\boldsymbol{\pi}$ 满足</p>
+<p>$$<br>\boldsymbol{\pi} &#x3D; \mathbf{M} \boldsymbol{\pi},<br>$$</p>
+<p>则称分布 $\boldsymbol{\pi}$ 为该马尔可夫链的平稳分布（Stationary Distribution）。根据特征向量的定义可知，$\boldsymbol{\pi}$ 为矩阵 $\mathbf{M}$ 的（归一化）的对应特征值为 1 的特征向量。</p>
+<p>如果一个马尔可夫链的状态转移矩阵 $\mathbf{M}$ 满足所有状态可遍历性以及非周期性，那么对于任意一个初始状态分布 $\boldsymbol{\pi}^{(0)}$，在经过一定时间的状态转移之后，都会收敛到平稳分布，即</p>
+<p>$$<br>\boldsymbol{\pi} &#x3D; \lim_{T \to \infty} \mathbf{M}^T \boldsymbol{\pi}^{(0)}.<br>$$</p>
+<h5 id="3-1-5-1-1细致平稳条件（Detailed-Balance-Condition）"><a href="#3-1-5-1-1细致平稳条件（Detailed-Balance-Condition）" class="headerlink" title="3.1.5.1.1细致平稳条件（Detailed Balance Condition）"></a>3.1.5.1.1细致平稳条件（Detailed Balance Condition）</h5><p>给定一个状态空间中的分布 $\boldsymbol{\pi} \in [0, 1]^K$，如果一个状态转移矩阵为 $\mathbf{M} \in \mathbb{R}^{K \times K}$ 的马尔可夫链满足</p>
+<p>$$<br>\pi_i m_{ij} &#x3D; \pi_j m_{ji}, \quad \forall 1 \leq i, j \leq K<br>$$</p>
+<p>则该马尔可夫链经过一定时间的状态转移后一定会收敛到分布 $\boldsymbol{\pi}$。</p>
+<p>细致平稳条件只是马尔可夫链收敛的充分条件，不是必要条件。细致平稳条件保证了从状态 $i$ 转移到状态 $j$ 的数量和从状态 $j$ 转移到状态 $i$ 的数量相一致，互相抵消，所以数量不发生改变。</p>
+<h2 id="3-2高斯过程"><a href="#3-2高斯过程" class="headerlink" title="3.2高斯过程"></a>3.2高斯过程</h2>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Shi Zhou</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2025/02/28/%E6%A6%82%E7%8E%87%E8%AE%BA/">http://example.com/2025/02/28/%E6%A6%82%E7%8E%87%E8%AE%BA/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Shi Zhou</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2025/02/28/%E5%BC%A0%E9%87%8F/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-02-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Shi Zhou
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2025/02/28/%E8%87%AA%E5%8A%A8%E5%BE%AE%E5%88%86/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-02-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Shi Zhou
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2025</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Shi Zhou</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
